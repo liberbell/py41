@@ -1,8 +1,8 @@
 num = 1
-name = 'Mike'
+name = '1'
 is_ok = True
 
 new_num = int(name)
-print(num, type(num))
+print(new_num, type(new_num))
 print(name, type(name))
 print(is_ok, type(is_ok))
