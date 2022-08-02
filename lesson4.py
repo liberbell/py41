@@ -8,8 +8,10 @@ print("say \"I don't know\"")
 print('hello. \n How are you.')
 print(r'c:\name\name')
 
-print("""
+print("##########")
+print("""\
 line1
 line2
-line3
+line3\
 """)
+print("##########")
