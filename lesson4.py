@@ -21,6 +21,6 @@ print('Py''thon')
 prefix = 'Py'
 print(prefix + 'thon')
 
-s = ('aaaaaaaaaaaaaaaaaaa'
+s = ('aaaaaaaaaaaaaaaaaaa' \
 'bbbbbbbbbbbbbbbbbbb')
 print(s)
