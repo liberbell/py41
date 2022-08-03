@@ -13,3 +13,5 @@ print(s.count('Mike'))
 
 print(s.capitalize())
 print(s.title())
+print(s.upper())
+print(s.lower())
