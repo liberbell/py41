@@ -19,4 +19,8 @@ print("##########")
 print('Hi' * 3 + 'Mike')
 print('Py''thon')
 prefix = 'Py'
-print(prefix, 'thon')
+print(prefix + 'thon')
+
+s = ('aaaaaaaaaaaaaaaaaaa'
+'bbbbbbbbbbbbbbbbbbb')
+print(s)
