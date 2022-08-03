@@ -9,5 +9,6 @@ print(word[:2])
 print(word[2:])
 # print(word[100])
 
-word[0] = 'j'
+# word[0] = 'j'
+word = 'j' + word[1:]
 print(word)
