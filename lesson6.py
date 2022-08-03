@@ -10,3 +10,6 @@ print('######')
 print(s.find('Mike'))
 print(s.rfind('Mike'))
 print(s.count('Mike'))
+
+print(s.capitalize())
+print(s.title())
