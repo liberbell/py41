@@ -12,7 +12,7 @@ n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # print(n[::-1])
 
 a = ["a", "b", "c"]
-n = [1, 2, 3]
+# n = [1, 2, 3]
 x = [a, n]
 # print(type(x))
 # print(x[1][2])
@@ -23,3 +23,11 @@ s[0] = "x"
 print(s)
 s[2:5] = ["X", "Y", "Z"]
 print(s)
+
+s[2:5] = []
+print(s)
+s[:] = []
+print(s)
+
+n.append(11)
+print(n)
