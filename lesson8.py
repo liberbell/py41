@@ -39,3 +39,7 @@ print(n.pop(0))
 print(n)
 del n[0]
 print(n)
+
+n.remove(6)
+print(n)
+# n.remove(6)
