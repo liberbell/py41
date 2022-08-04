@@ -3,5 +3,10 @@ print(r.index(5, 5))
 
 print(r.count(6))
 
-if 4 in r:
+if 10 in r:
     print("exist!")
+
+r.sort()
+print(r)
+r.sort(reverse=True)
+print(r)
