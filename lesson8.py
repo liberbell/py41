@@ -21,3 +21,5 @@ s = ["a", "b", "c", "d", "e", "f", "g"]
 print(s[0])
 s[0] = "x"
 print(s)
+s[2:5] = ["X", "Y", "Z"]
+print(s)
