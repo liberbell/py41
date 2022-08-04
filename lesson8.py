@@ -35,3 +35,7 @@ n.insert(0, 200)
 print(n)
 print(n.pop())
 print(n)
+print(n.pop(0))
+print(n)
+del n[0]
+print(n)
