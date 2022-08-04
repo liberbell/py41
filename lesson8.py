@@ -31,3 +31,7 @@ print(s)
 
 n.append(11)
 print(n)
+n.insert(0, 200)
+print(n)
+print(n.pop())
+print(n)
