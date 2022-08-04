@@ -15,4 +15,4 @@ a = ["a", "b", "c"]
 n = [1, 2, 3]
 x = [a, n]
 print(type(x))
-print(x)
+print(x[1][2])
