@@ -43,3 +43,12 @@ print(n)
 n.remove(6)
 print(n)
 # n.remove(6)
+
+a = [1, 2, 3, 4, 5]
+b = [6, 7, 8, 9, 10]
+x = [a, b]
+print(x)
+a += b
+print(a)
+x = [1, 2, 3, 4, 5]
+y = [6, 7, 8, 9, 10]
