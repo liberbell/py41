@@ -11,3 +11,6 @@ print(t)
 
 new_tuple = (1, 2, 3) + (4, 5, 6)
 print(new_tuple)
+
+num_tuple = (10, 20)
+print(num_tuple)
