@@ -6,6 +6,6 @@ print("j = ", j)
 
 x = [1, 2, 3, 4, 5]
 y = x.copy()
-y[100]
+y[0] = 100
 print("x =", x)
 print("y =", y)
