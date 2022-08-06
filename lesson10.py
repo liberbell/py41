@@ -10,3 +10,11 @@ y = x[:]
 y[0] = 100
 print("x =", x)
 print("y =", y)
+
+x = 10
+y = x
+y = 5
+print(x)
+print(y)
+print(id(x))
+print(id(y))
