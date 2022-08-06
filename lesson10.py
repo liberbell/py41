@@ -21,6 +21,8 @@ print(id(y))
 
 x = ["a", "b"]
 y = x
-y[0] = p
+y[0] = "p"
+print(id(x))
+print(id(y))
 print(x)
 print(y)
