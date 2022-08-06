@@ -12,3 +12,7 @@ r.sort(reverse=True)
 print(r)
 r.reverse()
 print(r)
+
+s = "My name is Mile."
+to_split = s.split(" ")
+print(to_split)
