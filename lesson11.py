@@ -14,3 +14,7 @@ print(min <= len(seat) < max)
 
 seat.append("s")
 print(min <= len(seat) < max)
+
+seat.pop(0)
+print(seat)
+print(min <= len(seat) < max)
