@@ -18,3 +18,9 @@ print(x)
 print(y)
 print(id(x))
 print(id(y))
+
+x = ["a", "b"]
+y = x
+y[0] = p
+print(x)
+print(y)
