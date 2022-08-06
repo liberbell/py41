@@ -5,7 +5,8 @@ print("i = ", i)
 print("j = ", j)
 
 x = [1, 2, 3, 4, 5]
-y = x.copy()
+# y = x.copy()
+y = x[:]
 y[0] = 100
 print("x =", x)
 print("y =", y)
