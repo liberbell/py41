@@ -16,3 +16,6 @@ print(r)
 s = "My name is Mile."
 to_split = s.split(" ")
 print(to_split)
+
+x = " ".join(to_split)
+print(x)
