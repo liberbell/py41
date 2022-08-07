@@ -17,3 +17,8 @@ print(num_tuple)
 
 x, y = num_tuple
 print(x, y)
+
+min, max = 0, 100
+print(min, max)
+a, b, c, d, e, f = "Mike", "1", 1, "1", "e", "f"
+print(a, b, c, d, e, f)
