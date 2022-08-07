@@ -14,3 +14,6 @@ print(d1)
 
 d2 = dict([("a", 10), ("b", 20)])
 print(d2)
+
+d3 = {"x": 10, "y": 20}
+print(d3.keys(), d3.values())
