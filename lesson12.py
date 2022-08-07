@@ -1,3 +1,6 @@
+from re import I
+
+
 t = (1, 2, 3, 4, 5)
 print(t)
 print(type(t))
@@ -22,3 +25,10 @@ min, max = 0, 100
 print(min, max)
 a, b, c, d, e, f = "Mike", "1", 1, "1", "e", "f"
 print(a, b, c, d, e, f)
+
+i = 10
+j = 20
+tmp = i
+i = j
+j = tmp
+print(i, j)
