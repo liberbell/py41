@@ -17,3 +17,7 @@ print(d2)
 
 d3 = {"x": 10, "y": 20}
 print(d3.keys(), d3.values())
+
+d4 = {"x": 1000, "j": 500}
+d3.update(d4)
+print(d3)
