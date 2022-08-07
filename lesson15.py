@@ -20,3 +20,4 @@ l = [
     ["banana", 200],
     ["orange", 300],
 ]
+print(l[0])
