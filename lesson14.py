@@ -21,3 +21,5 @@ print(d3.keys(), d3.values())
 d4 = {"x": 1000, "j": 500}
 d3.update(d4)
 print(d3)
+print(d.get("x"))
+print(d.get("i"))
