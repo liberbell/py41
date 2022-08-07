@@ -12,3 +12,7 @@ b = {4, 2, 7, 9, 7, 4, 2, 5, 0}
 
 a.add(10)
 print(a)
+a.remove(6)
+print(a)
+a.clear()
+print(a)
