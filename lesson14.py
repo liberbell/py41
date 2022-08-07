@@ -11,3 +11,6 @@ print(d)
 
 d1 = dict(a=10, b=20)
 print(d1)
+
+d2 = dict([("a":10), ("b": 20)])
+print(d2)
