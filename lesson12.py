@@ -32,3 +32,8 @@ tmp = i
 i = j
 j = tmp
 print(i, j)
+
+a = 100
+b = 200
+a, b = b, a
+print(a, b)
