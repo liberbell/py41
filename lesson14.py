@@ -26,4 +26,8 @@ print(d.get("i"))
 d.pop("x")
 print(d)
 del d
+# print(d)
+d = {"a": 200, "b": 100}
+print(d)
+d.clear()
 print(d)
