@@ -23,3 +23,7 @@ d3.update(d4)
 print(d3)
 print(d.get("x"))
 print(d.get("i"))
+d.pop("x")
+print(d)
+del d
+print(d)
