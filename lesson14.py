@@ -31,3 +31,6 @@ d = {"a": 200, "b": 100}
 print(d)
 d.clear()
 print(d)
+d = {"a": 200, "b": 100}
+print("a" in d)
+print("z" in d)
