@@ -13,6 +13,12 @@ b = 2
 if a != b:
     print("Not equal")
 
-is_ok = False
+is_ok = True
 if not is_ok:
     print("not true")
+
+is_ok = 0
+if is_ok:
+    print("True!")
+else:
+    print("No!")
