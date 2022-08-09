@@ -12,3 +12,7 @@ b = 2
 
 if a != b:
     print("Not equal")
+
+is_ok = False
+if not is_ok:
+    print("not true")
