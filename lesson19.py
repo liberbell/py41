@@ -1,3 +1,6 @@
 a = 1
 b = 1
-print(a == b)
+# if a == b:
+#     print("equal")
+if a != b:
+    print("a != b")
