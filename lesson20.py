@@ -17,7 +17,7 @@ is_ok = True
 if not is_ok:
     print("not true")
 
-is_ok = 0
+is_ok = ""
 if is_ok:
     print("True!")
 else:
