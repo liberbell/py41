@@ -12,10 +12,16 @@ count = 0
 #     print(count)
 #     count += 1
 
-while count < 5:
-    if count == 1:
-        continue
-    print(count)
-    count += 1
-else:
-    print("done.")
+# while count < 5:
+#     if count == 1:
+#         continue
+#     print(count)
+#     count += 1
+# else:
+#     print("done.")
+
+while True:
+    word = input("Enter:")
+    if word == "ok":
+        break
+    print("next")
