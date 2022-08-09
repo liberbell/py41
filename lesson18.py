@@ -1,0 +1,2 @@
+s = "AAAAAAAAAA" + "BBBBBBBBBBB"
+print(s)
