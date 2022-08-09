@@ -1,2 +1,8 @@
-s = "AAAAAAAAAA" + "BBBBBBBBBBB"
-print(s)
+s = "AAAAAAAAAA" \
+ + "BBBBBBBBBBB"
+# print(s)
+
+x = 1 + 1 + 1 + 1 + 1 + 1 + 1 \
+    + 1 + 1 + 1 + 1 + 1 + 1 + 1
+# print(x)
+
