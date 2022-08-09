@@ -6,3 +6,6 @@ b = 1
 #     print("a != b")
 
 print(a >= b)
+
+if a > 0 and b > 0:
+    print("A and  B are positive")
