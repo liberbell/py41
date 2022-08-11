@@ -18,3 +18,8 @@ for word in ["My", "name", "is", "Bob."]:
     if word == "name":
         continue
     print(word)
+
+for fruit in ["apple", "nanana", "orange"]:
+    print(fruit)
+else:
+    print("I ate all.")
