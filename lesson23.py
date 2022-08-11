@@ -19,7 +19,10 @@ for word in ["My", "name", "is", "Bob."]:
         continue
     print(word)
 
-for fruit in ["apple", "nanana", "orange"]:
+for fruit in ["apple", "banana", "orange"]:
+    if fruit == "banana":
+        print("stop eating")
+        break
     print(fruit)
 else:
     print("I ate all.")
