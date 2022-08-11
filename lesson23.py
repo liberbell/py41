@@ -16,5 +16,5 @@ for word in ["My", "name", "is", "Bob."]:
 
 for word in ["My", "name", "is", "Bob."]:
     if word == "name":
-        break
+        continue
     print(word)
