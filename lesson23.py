@@ -13,3 +13,8 @@ for s in "abcde":
 
 for word in ["My", "name", "is", "Bob."]:
     print(word)
+
+for word in ["My", "name", "is", "Bob."]:
+    if word == "name":
+        break
+    print(word)
