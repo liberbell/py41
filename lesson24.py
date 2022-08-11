@@ -8,5 +8,12 @@
 # for i in range(10):
 #     print("hello", i)
 
-for i, fruit in enumerate(["apple", "banana", "orange"]):
-    print(i, fruit)
+# for i, fruit in enumerate(["apple", "banana", "orange"]):
+#     print(i, fruit)
+
+days = ["Mon", "Tue", "Wed"]
+fruits = ["apple", "banana", "orange"]
+drinks = ["coffee", "tea", "beer"]
+
+for i in range(len(days)):
+    print(days[i], fruits[i], drinks[i])
