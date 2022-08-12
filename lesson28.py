@@ -3,9 +3,10 @@ def menu(entree="beef", drink="wine"):
 
 menu(entree="beef", drink="beer")
 
-def menu2(**kwargs):
-    print(kwargs)
+def menu2(food, *args, **kwargs):
+    # print(kwargs)
     for k, v in kwargs.items():
-        print(k, v)
+        # print(k, v)
+    print
 
-menu2(entree="beef", drink="beer")
+menu2("banana", "apple", "lemon", entree="beef", drink="beer")
