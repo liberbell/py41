@@ -11,5 +11,5 @@ def say_something():
 # say_something()
 print(type(say_something))
 
-f = say_something
-f()
+f = say_something()
+print(f)
