@@ -25,3 +25,7 @@ def what_is_this(color):
 
 result = what_is_this("red")
 print(result)
+result = what_is_this("green")
+print(result)
+result = what_is_this("blue")
+print(result)
