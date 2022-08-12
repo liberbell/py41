@@ -6,7 +6,7 @@ def add_num(a: int, b:int) -> int:
 r = add_num("a", "b")
 # print(r)
 
-def menu(entree, drink, dessert):
+def menu(entree="beef", drink="beer", dessert="ice"):
     print("entree: ", entree, "drink: ", drink, "deseert: ", dessert)
 
-menu(entree="beef", drink="beer", dessert="ice")
+menu(entree="pork", drink="beer", dessert="fruit")
