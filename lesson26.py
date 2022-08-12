@@ -7,6 +7,6 @@ r = add_num("a", "b")
 # print(r)
 
 def menu(entree, drink, dessert):
-    print(entree, drink, dessert)
+    print("entree: ", entree, "drink: ", drink, "deseert: ", dessert)
 
-menu("beef", "beer", "ice")
+menu(entree="beef", drink="beer", dessert="ice")
