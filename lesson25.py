@@ -4,9 +4,11 @@
 #     print(k, ";", v)
 
 def say_something():
-    print("hi")
+    # print("hi")
+    s = "hello"
+    return s
 
-say_something()
+# say_something()
 print(type(say_something))
 
 f = say_something
