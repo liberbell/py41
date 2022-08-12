@@ -10,3 +10,4 @@ def menu(entree="beef", drink="beer", dessert="ice"):
     print("entree: ", entree, "drink: ", drink, "deseert: ", dessert)
 
 menu(entree="pork", drink="beer", dessert="fruit")
+menu()
