@@ -12,7 +12,9 @@ def menu(entree="beef", drink="beer", dessert="ice"):
 menu(entree="pork", drink="beer", dessert="fruit")
 menu()
 
-def test_func(x, l = []):
+def test_func(x, l = None):
+    if l is None:
+        l = []
     l.append(x)
     return l
 
