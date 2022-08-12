@@ -3,8 +3,8 @@ def say_somethinsg(word):
 
 say_somethinsg("Hi")
 
-def say_somethinsg2(*args):
-    print(args)
+def say_somethinsg2(word, *args):
+    print(word)
     for arg in args:
         print(arg)
 
