@@ -26,3 +26,6 @@ def test_func(x, l = []):
 
 r = test_func(100)
 print(r)
+
+r = test_func(100)
+print(r)
