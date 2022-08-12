@@ -9,7 +9,12 @@ def say_something():
     return s
 
 # say_something()
-print(type(say_something))
+# print(type(say_something))
 
-f = say_something()
-print(f)
+# f = say_something()
+# print(f)
+
+def what_is_this(color):
+    print(color)
+
+what_is_this("red")
