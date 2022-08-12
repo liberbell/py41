@@ -17,4 +17,5 @@ def test_func(x, l = []):
     return l
 
 y = [1, 2, 3]
-test_func(100, y)
+r = test_func(100, y)
+print(r)
