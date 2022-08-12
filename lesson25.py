@@ -15,6 +15,13 @@ def say_something():
 # print(f)
 
 def what_is_this(color):
-    print(color)
+    if color == "red":
+        return "tomato"
+    elif color == "green":
+        return "green pepper"
+    else:
+        return "I don`t know."
+    # print(color)
 
-what_is_this("red")
+result = what_is_this("red")
+print(result)
