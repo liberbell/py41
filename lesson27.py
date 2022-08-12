@@ -9,3 +9,6 @@ def say_somethinsg2(word, *args):
         print(arg)
 
 say_somethinsg2("Hi", "Eric", "How", "are", "you.")
+
+t = ("Eric", "How", "are", "you.")
+say_somethinsg2("Hi", *t)
