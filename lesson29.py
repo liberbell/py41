@@ -4,6 +4,6 @@ def outer(a, b):
         return c + d
     
     r = plus(a + b)
-    return r
+    print(r)
 
 outer(1, 2)
