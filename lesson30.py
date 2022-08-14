@@ -20,6 +20,16 @@
 # print(cal1(10))
 # print(cal2(10))
 
+def print_more(func):
+    def wrapper(*args, **kwargs):
+        print("func: ", func.__name__)
+        print("args: ", args)
+        print("kwargs:", kwargs)
+        result = func(*args, **kwargs)
+        print("result:", result)
+        return result
+    return wrapper
+
 def print_info(func):
     def wrapper(*args, **kwargs):
         print("start")
@@ -28,7 +38,7 @@ def print_info(func):
         return result
     return wrapper
 
-@print_info
+@print_more
 def add_num(a, b):
     return a + b
 
