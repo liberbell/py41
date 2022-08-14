@@ -1,3 +1,7 @@
+def counter(num=10):
+    for _ in range(num):
+        yield "run"
+
 l = ["good morning", "good afternoon", "good night"]
 
 for i in l:
