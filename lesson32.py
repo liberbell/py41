@@ -10,5 +10,9 @@ def greeting():
     yield "good afternoon"
     yield "good night"
 
-for g in greeting():
-    print(g)
+# for g in greeting():
+#     print(g)
+
+g = greeting()
+print(next(g))
+print(next(g))
