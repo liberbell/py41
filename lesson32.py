@@ -18,9 +18,22 @@ def greeting():
 #     print(g)
 
 g = greeting()
+c = counter()
 print(next(g))
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+
 print("!!!!!!")
 print(next(g))
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+
 print("!!!!!!")
 print(next(g))
 # print(next(g))
