@@ -19,3 +19,6 @@ for i in l:
         r.append(i * j)
 
 print(r)
+
+r = [i * j for i in l for j in l2]
+print(r)
