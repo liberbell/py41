@@ -7,6 +7,7 @@ def change_words(words, func):
 # def sample_func(word):
 #     return word.capitalize()
 
-sample_func = lambda word: word.capitalize()
+# sample_func = lambda word: word.capitalize()
 
-change_words(l, sample_func)
+# change_words(l, sample_func)
+change_words(l, lambda word: word.capitalize())
