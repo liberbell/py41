@@ -4,4 +4,5 @@ def outer(a, b):
 
     return inner
 
-outer(1, 2)
+f = outer(1, 2)
+print(f)
