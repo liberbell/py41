@@ -39,18 +39,19 @@ def print_info(func):
     return wrapper
 
 @print_more
+@print_info
 def add_num(a, b):
     return a + b
 
 r = add_num(10, 20)
 print(r)
 
-@print_info
-def sub_num(a, b):
-    return a - b
+# @print_info
+# def sub_num(a, b):
+#     return a - b
 
-s = sub_num(20, 10)
-print(s)
+# s = sub_num(20, 10)
+# print(s)
 # print("start")
 # r = add_num(10, 20)
 # print("end")
