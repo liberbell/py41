@@ -23,7 +23,7 @@
 def print_info(func):
     def wrapper(*args, **kwargs):
         print("start")
-        result = func(args, kwargs)
+        result = func(*args, **kwargs)
         print("end")
         return result
     return wrapper
@@ -38,4 +38,5 @@ def add_num(a, b):
 # print(r)
 
 f = print_info(add_num)
-print(f)
+r = f(10, 20)
+print(r)
