@@ -34,6 +34,13 @@ def add_num(a, b):
 
 r = add_num(10, 20)
 print(r)
+
+@print_info
+def sub_num(a, b):
+    return a - b
+
+s = sub_num(20, 10)
+print(s)
 # print("start")
 # r = add_num(10, 20)
 # print("end")
