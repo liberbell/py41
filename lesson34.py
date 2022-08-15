@@ -15,3 +15,6 @@ for i in range(10):
     s.add(i)
 
 print(s)
+
+s = set{s for i in range(10)}
+print(s)
