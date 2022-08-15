@@ -1,6 +1,3 @@
-from tkinter import Y
-
-
 w = ["mon", "tue", "wed"]
 f = ["coffee", "milk", "water"]
 
@@ -10,5 +7,11 @@ f = ["coffee", "milk", "water"]
 
 # print(d)
 
-d = {x: y for x, y in zip(w, f)}
-print(d)
+# d = {x: y for x, y in zip(w, f)}
+# print(d)
+
+s = set()
+for i in range(10):
+    s.add(i)
+
+print(s)
