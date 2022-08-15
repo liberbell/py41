@@ -1,3 +1,6 @@
+"""
+test##############
+"""
 # def g():
 #     for i in range(10):
 #         yield i
@@ -11,13 +14,19 @@
 # for x in g:
 #     print(x)
 
+from tokenize import Name
+from unicodedata import name
+
+
 animal = "cat"
 
 def f():
     # print(animal)
     # global animal
     # animal = "dog"
-    print("after", locals())
+    # print("after", locals())
+    """Test func doc"""
 
 f()
+print(__name__)
 print("global", globals())
