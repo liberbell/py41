@@ -26,6 +26,8 @@ def f():
     # animal = "dog"
     # print("after", locals())
     """Test func doc"""
+    print(f.__name__)
+    print(f.__doc__)
 
 f()
 print(__name__)
