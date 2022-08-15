@@ -14,6 +14,8 @@
 animal = "cat"
 
 def f():
+    # print(animal)
+    animal = "dog"
     print(animal)
 
 print(animal)
