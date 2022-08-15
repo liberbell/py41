@@ -1,5 +1,11 @@
+from tkinter import Y
+
+
 w = ["mon", "tue", "wed"]
 f = ["coffee", "milk", "water"]
 
+d = {}
 for k, v in zip(w, f):
-    print(k, v)
+    d[k] = v
+
+print(d)
