@@ -1,3 +1,6 @@
 l = [1, 2, 3]
 i = 5
-print(l[i])
+try:
+    print(l[i])
+except:
+    print("don`t worry.")
