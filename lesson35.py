@@ -15,9 +15,9 @@ animal = "cat"
 
 def f():
     # print(animal)
-    global animal
-    animal = "dog"
-    print("after", animal)
+    # global animal
+    # animal = "dog"
+    print("after", locals())
 
 f()
-print("global", animal)
+print("global", globals())
