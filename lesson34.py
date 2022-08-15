@@ -16,5 +16,5 @@ for i in range(10):
 
 print(s)
 
-s = set{s for i in range(10)}
+s = {i for i in range(10)}
 print(s)
