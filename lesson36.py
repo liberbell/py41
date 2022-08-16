@@ -11,3 +11,5 @@ except NameError as exc:
     print("name error. {}".format(exc))
 except Exception as exc:
     print("Exception error.{}".format(exc))
+
+print("last")
