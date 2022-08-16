@@ -1,5 +1,5 @@
 l = [1, 2, 3]
-i = 5
+i = 1
 # del l
 
 try:
@@ -11,5 +11,7 @@ except NameError as exc:
     print("name error. {}".format(exc))
 except Exception as exc:
     print("Exception error.{}".format(exc))
+else:
+    print("done")
 finally:
     print("clean up.")
