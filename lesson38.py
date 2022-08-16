@@ -1,3 +1,7 @@
 import sys
 
-print(sys.argv)
+l = sys.argv
+print(l[1])
+
+for i in l:
+    print(i)
