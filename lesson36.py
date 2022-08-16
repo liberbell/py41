@@ -1,9 +1,9 @@
 l = [1, 2, 3]
 i = 5
-# del l
+del l
 
 try:
-    () + 1
+    # () + 1
     print(l[i])
 except IndexError as exc:
     print("don`t worry. {}".format(exc))
@@ -11,5 +11,5 @@ except NameError as exc:
     print("name error. {}".format(exc))
 except Exception as exc:
     print("Exception error.{}".format(exc))
-
-print("last")
+finally:
+    print("clean up.")
