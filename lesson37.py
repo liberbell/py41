@@ -12,4 +12,7 @@ def check():
         if word.isupper():
             raise UpperCaseError(word)
 
-check()
+try:
+    check()
+except UpperCaseError as exc:
+    print("This is my fault. {}".format(exc))
