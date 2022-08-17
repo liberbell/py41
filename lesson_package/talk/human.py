@@ -1,4 +1,5 @@
-from lesson_package.tools import utils
+# from lesson_package.tools import utils
+from ..tools import utils
 def sing():
     return "sing"
 
