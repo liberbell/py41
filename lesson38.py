@@ -5,7 +5,10 @@
 # from lesson_package.talk import human
 # from lesson_package.talk import animal
 # from lesson_package.talk import *
-from lesson_package.tools import utils
+try:
+    from lesson_package import utils
+except ImportError:
+    from lesson_package.tools import utils
 
 # l = sys.argv
 # print(l[1])
