@@ -1,4 +1,4 @@
-print(globals())
+# print(globals())
 
 # builtins.print()
 
@@ -12,3 +12,9 @@ for key in ranking:
     print(key)
 
 print(sorted(ranking, key=ranking.get, reverse=True))
+
+s = "aoekkdergkxsptyqqvgjsffs"
+
+d = {}
+for c in s:
+    d[c] += 1
