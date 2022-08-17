@@ -16,3 +16,4 @@ r = u.say_twice("bye")
 print(r)
 
 print(human.sing())
+print(human.cry())
