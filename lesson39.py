@@ -11,4 +11,4 @@ ranking = {
 for key in ranking:
     print(key)
 
-print(sorted(ranking, key=ranking.get))
+print(sorted(ranking, key=ranking.get, reverse=True))
