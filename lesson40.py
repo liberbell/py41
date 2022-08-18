@@ -10,3 +10,5 @@ import config
 
 print("test")
 print(colored("test", "blue"))
+
+print(collections.__file__)
