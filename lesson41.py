@@ -1,3 +1,3 @@
 import config
 
-print(__name__)
+print("lesson:", __name__)
