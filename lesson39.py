@@ -36,3 +36,4 @@ for c in s:
     d[c] += 1
 
 print(d)
+print(d["g"])
