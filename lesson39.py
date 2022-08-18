@@ -22,3 +22,10 @@ for c in s:
     d[c] += 1
 
 print(d)
+
+d = {}
+for c in s:
+    c.setdefault(c, 0)
+    d[c] += 1
+
+print(d)
