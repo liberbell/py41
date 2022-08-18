@@ -1,3 +1,4 @@
+from collections import defaultdict
 # print(globals())
 
 # builtins.print()
@@ -25,7 +26,13 @@ print(d)
 
 d = {}
 for c in s:
-    c.setdefault(c, 0)
+    d.setdefault(c, 0)
+    d[c] += 1
+
+print(d)
+
+d = defaultdict(int)
+for c in s:
     d[c] += 1
 
 print(d)
