@@ -2,13 +2,14 @@ import collections
 import os
 import sys
 
-from termcolor import colored
+import termcolor
 
 import lesson_package
 
 import config
 
 print("test")
-print(colored("test", "blue"))
+# print(colored("test", "blue"))
 
 print(collections.__file__)
+print(termcolor.__file__)
