@@ -13,3 +13,5 @@ print("test")
 
 print(collections.__file__)
 print(termcolor.__file__)
+print(lesson_package.__file__)
+print(config.__file__)
