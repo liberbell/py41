@@ -8,8 +8,8 @@ class Person(object):
         print(self.name)
 
     def say_something(self):
-        print("hello")
+        print("I am {}, hello.".format(self.name))
 
 
 person = Person("mike")
-# person.say_something()
+person.say_something()
