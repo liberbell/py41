@@ -34,3 +34,6 @@ class ToyotaCar(Car):
 
 car = Car()
 car.run()
+
+toyota_car = ToyotaCar()
+toyota_car.run()
