@@ -32,8 +32,15 @@ class Car(object):
 class ToyotaCar(Car):
     pass
 
+class TeslaCar(Car):
+    def auto_run(self):
+        print("Auto run")
+
 car = Car()
 car.run()
 
 toyota_car = ToyotaCar()
 toyota_car.run()
+
+tesla_car = TeslaCar()
+tesla_car.auto_run()
