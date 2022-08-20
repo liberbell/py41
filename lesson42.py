@@ -9,10 +9,10 @@ class Person(object):
 
     def say_something(self):
         print("I am {}, hello.".format(self.name))
-        self.run()
+        self.run(10)
 
-    def run(self):
-        print("run")
+    def run(self, num):
+        print("run" * num)
 
 
 person = Person("mike")
