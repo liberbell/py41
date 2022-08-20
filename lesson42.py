@@ -44,3 +44,4 @@ toyota_car.run()
 
 tesla_car = TeslaCar()
 tesla_car.auto_run()
+tesla_car.run()
