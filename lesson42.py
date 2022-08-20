@@ -31,3 +31,6 @@ class Car(object):
 
 class ToyotaCar(Car):
     pass
+
+car = Car()
+car.run()
