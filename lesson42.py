@@ -1,14 +1,15 @@
 s = "fkipqxjikrjlkjsfckcdf"
 
-print(s.capitalize())
+# print(s.capitalize())
 
 class Person(object):
-    def __init__(self):
-        print("First")
+    def __init__(self, name):
+        self.name = name
+        print(self.name)
 
     def say_something(self):
         print("hello")
 
 
-person = Person()
-person.say_something()
+person = Person("mike")
+# person.say_something()
