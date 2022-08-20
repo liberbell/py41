@@ -24,3 +24,9 @@ person.say_something()
 del person
 
 print("#########")
+
+class Car(object):
+    pass
+
+class ToyotaCar(Car):
+    pass
