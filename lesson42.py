@@ -26,7 +26,8 @@ del person
 print("#########")
 
 class Car(object):
-    pass
+    def run(self):
+        print("run")
 
 class ToyotaCar(Car):
     pass
