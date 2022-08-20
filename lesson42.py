@@ -9,6 +9,10 @@ class Person(object):
 
     def say_something(self):
         print("I am {}, hello.".format(self.name))
+        self.run()
+
+    def run(self):
+        print("run")
 
 
 person = Person("mike")
