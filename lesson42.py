@@ -20,3 +20,7 @@ class Person(object):
 
 person = Person("mike")
 person.say_something()
+
+del person
+
+print("#########")
