@@ -89,7 +89,7 @@ class TeslaCar(Car):
     def auto_run(self):
         print("super fast")
 
-# car = Car()
+car = Car()
 # car.run()
 
 # print("#####")
@@ -115,3 +115,5 @@ class TeslaCar(Car):
 # t.name = "APPLE"
 # t.price = 30000
 # print(t.name, t.price)
+
+car.ride(baby)
