@@ -36,6 +36,9 @@ class ToyotaCar(Car):
         print("fast")
 
 class TeslaCar(Car):
+    def __init__(self, model="Model S", enable_auto_run=False):
+        self.model = model
+        self.enable_auto_run = enable_auto_run
     def auto_run(self):
         print("super fast")
 
