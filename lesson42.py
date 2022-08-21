@@ -56,8 +56,10 @@ class Adult(Person):
         print("OK")
 
 baby = Baby()
-adult = Adult()
+# baby.drive()
 
+adult = Adult()
+adult.drive()
 
 class Car(object):
     def __init__(self, model=None):
@@ -122,4 +124,4 @@ car = Car()
 # t.price = 30000
 # print(t.name, t.price)
 
-car.ride(adult)
+# car.ride(adult)
