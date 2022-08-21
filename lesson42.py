@@ -47,7 +47,7 @@ toyota_car = ToyotaCar("Lexus")
 print(toyota_car.model)
 toyota_car.run()
 
-tesla_car = TeslaCar()
-
+tesla_car = TeslaCar("Model S")
+print(tesla_car.model)
 tesla_car.run()
 tesla_car.auto_run()
