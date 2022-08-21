@@ -1,3 +1,6 @@
+from logging import exception
+
+
 s = "fkipqxjikrjlkjsfckcdf"
 
 # print(s.capitalize())
@@ -9,6 +12,8 @@ class Person(object):
     def drice(self):
         if self.age >= 18:
             print("OK")
+        else:
+            raise Exception("No Drive")
         # self.name = name
         # print(self.name)
 
@@ -29,6 +34,20 @@ class Person(object):
 # del person
 
 # print("#########")
+
+class Baby(Person):
+    def __init__(self, age=1):
+        if age < 18:
+            super().__init__(age)
+        else:
+            raise ValueError
+
+class Adult(Person):
+    def __init__(self, age=18):
+        if age >= 18:
+            super().__init__(age)
+        else:
+            raise ValueError
 
 class Car(object):
     def __init__(self, model=None):
