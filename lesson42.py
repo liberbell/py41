@@ -49,6 +49,10 @@ class Adult(Person):
         else:
             raise ValueError
 
+baby = Baby()
+adult = Adult()
+
+
 class Car(object):
     def __init__(self, model=None):
         self.model = model
@@ -98,16 +102,16 @@ class TeslaCar(Car):
 # tesla_car.run()
 # tesla_car.auto_run()
 
-tesla_car = TeslaCar("Model S", passwd="456")
-print(tesla_car.enable_auto_run)
+# tesla_car = TeslaCar("Model S", passwd="456")
+# print(tesla_car.enable_auto_run)
 
-tesla_car.enable_auto_run = True
-print(tesla_car.enable_auto_run)
+# tesla_car.enable_auto_run = True
+# print(tesla_car.enable_auto_run)
 
-class T(object):
-    pass
+# class T(object):
+#     pass
 
-t = T()
-t.name = "APPLE"
-t.price = 30000
-print(t.name, t.price)
+# t = T()
+# t.name = "APPLE"
+# t.price = 30000
+# print(t.name, t.price)
