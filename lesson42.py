@@ -9,11 +9,11 @@ class Person(object):
     def __init__(self, age=1):
         self.age = age
 
-    def drive(self):
-        if self.age >= 18:
-            print("OK")
-        else:
-            raise Exception("No Drive")
+    # def drive(self):
+    #     if self.age >= 18:
+    #         print("OK")
+    #     else:
+    #         raise Exception("No Drive")
         # self.name = name
         # print(self.name)
 
@@ -37,10 +37,10 @@ class Person(object):
 
 class Baby(Person):
     def __init__(self, age=1):
-        if age < 18:
-            super().__init__(age)
-        else:
-            raise ValueError
+        raise ValueError
+
+    def drive(self):
+        raise Exception("No Drive")
 
 class Adult(Person):
     def __init__(self, age=18):
@@ -48,6 +48,9 @@ class Adult(Person):
             super().__init__(age)
         else:
             raise ValueError
+
+    def drive(self):
+        print("OK")
 
 baby = Baby()
 adult = Adult()
