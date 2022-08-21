@@ -3,19 +3,24 @@ s = "fkipqxjikrjlkjsfckcdf"
 # print(s.capitalize())
 
 class Person(object):
-    def __init__(self, name):
-        self.name = name
-        print(self.name)
+    def __init__(self, age=1):
+        self.age = age
 
-    def say_something(self):
-        print("I am {}, hello.".format(self.name))
-        self.run(10)
+    def drice(self):
+        if self.age >= 18:
+            print("OK")
+        # self.name = name
+        # print(self.name)
 
-    def run(self, num):
-        print("run" * num)
+    # def say_something(self):
+    #     print("I am {}, hello.".format(self.name))
+    #     self.run(10)
 
-    def __del__(self):
-        print("good bye")
+    # def run(self, num):
+    #     print("run" * num)
+
+    # def __del__(self):
+    #     print("good bye")
 
 
 # person = Person("mike")
