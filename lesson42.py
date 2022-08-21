@@ -36,10 +36,11 @@ class ToyotaCar(Car):
         print("fast")
 
 class TeslaCar(Car):
-    def __init__(self, model="Model S", enable_auto_run=False):
+    def __init__(self, model="Model S", enable_auto_run=False, passwd="1234"):
         # self.model = model
         super().__init__(model)
         self._enable_auto_run = enable_auto_run
+        self.passwd = passwd
 
     @property
     def enable_auto_run(self):
@@ -47,7 +48,11 @@ class TeslaCar(Car):
 
     @enable_auto_run.setter
     def enable_auto_run(self, is_enable):
-        self._enable_auto_run = is_enable
+        if self.passwd == "456":
+            self._enable_auto_run = is_enable
+        else:
+            raise ValueError
+        
 
     def auto_run(self):
         print("super fast")
