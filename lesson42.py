@@ -37,7 +37,10 @@ class Person(object):
 
 class Baby(Person):
     def __init__(self, age=1):
-        raise ValueError
+        if age < 18:
+            super().__init__(age)
+        else:
+            raise ValueError
 
     def drive(self):
         raise Exception("No Drive")
