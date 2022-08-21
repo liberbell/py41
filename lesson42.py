@@ -9,7 +9,7 @@ class Person(object):
     def __init__(self, age=1):
         self.age = age
 
-    def drice(self):
+    def drive(self):
         if self.age >= 18:
             print("OK")
         else:
@@ -67,27 +67,27 @@ class ToyotaCar(Car):
     def run(self):
         print("fast")
 
-class TeslaCar(Car):
-    def __init__(self, model="Model S", enable_auto_run=False, passwd="1234"):
-        # self.model = model
-        super().__init__(model)
-        self._enable_auto_run = enable_auto_run
-        self.passwd = passwd
+# class TeslaCar(Car):
+#     def __init__(self, model="Model S", enable_auto_run=False, passwd="1234"):
+#         # self.model = model
+#         super().__init__(model)
+#         self._enable_auto_run = enable_auto_run
+#         self.passwd = passwd
 
-    @property
-    def enable_auto_run(self):
-        return self._enable_auto_run
+#     @property
+#     def enable_auto_run(self):
+#         return self._enable_auto_run
 
-    @enable_auto_run.setter
-    def enable_auto_run(self, is_enable):
-        if self.passwd == "456":
-            self._enable_auto_run = is_enable
-        else:
-            raise ValueError
+#     @enable_auto_run.setter
+#     def enable_auto_run(self, is_enable):
+#         if self.passwd == "456":
+#             self._enable_auto_run = is_enable
+#         else:
+#             raise ValueError
         
 
-    def auto_run(self):
-        print("super fast")
+    # def auto_run(self):
+    #     print("super fast")
 
 car = Car()
 # car.run()
