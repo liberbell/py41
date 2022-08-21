@@ -70,7 +70,7 @@ class TeslaCar(Car):
 # tesla_car.run()
 # tesla_car.auto_run()
 
-tesla_car = TeslaCar("Model S")
+tesla_car = TeslaCar("Model S", passwd="456")
 print(tesla_car.enable_auto_run)
 
 tesla_car.enable_auto_run = True
