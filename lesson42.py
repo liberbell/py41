@@ -26,6 +26,8 @@ del person
 print("#########")
 
 class Car(object):
+    def __init__(self, model=None):
+        self.model = model
     def run(self):
         print("run")
 
@@ -41,7 +43,8 @@ car = Car()
 car.run()
 
 print("#####")
-toyota_car = ToyotaCar()
+toyota_car = ToyotaCar("Lexus")
+print(toyota_car.model)
 toyota_car.run()
 
 tesla_car = TeslaCar()
