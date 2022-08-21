@@ -75,3 +75,11 @@ print(tesla_car.enable_auto_run)
 
 tesla_car.enable_auto_run = True
 print(tesla_car.enable_auto_run)
+
+class T(object):
+    pass
+
+t = T()
+t.name = "APPLE"
+t.price = 30000
+print(t.name)
