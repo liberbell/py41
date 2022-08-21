@@ -28,8 +28,12 @@ class Person(object):
 class Car(object):
     def __init__(self, model=None):
         self.model = model
+
     def run(self):
         print("run")
+
+    def ride(self, person):
+        person.drive()
 
 class ToyotaCar(Car):
     def run(self):
