@@ -2,6 +2,9 @@ class Person(object):
     def talk(self):
         print("talk")
 
+    def run(self):
+        print("Person run")
+
 class Car(object):
     def run(self):
         print("run")
