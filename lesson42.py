@@ -45,6 +45,10 @@ class TeslaCar(Car):
     def enable_auto_run(self):
         return self._enable_auto_run
 
+    @enable_auto_run.setter
+    def enable_auto_run(self, is_enable):
+        self._enable_auto_run = is_enable
+
     def auto_run(self):
         print("super fast")
 
