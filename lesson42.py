@@ -18,12 +18,12 @@ class Person(object):
         print("good bye")
 
 
-person = Person("mike")
-person.say_something()
+# person = Person("mike")
+# person.say_something()
 
-del person
+# del person
 
-print("#########")
+# print("#########")
 
 class Car(object):
     def __init__(self, model=None):
@@ -37,20 +37,24 @@ class ToyotaCar(Car):
 
 class TeslaCar(Car):
     def __init__(self, model="Model S", enable_auto_run=False):
-        self.model = model
+        # self.model = model
+        super().__init__(model)
         self.enable_auto_run = enable_auto_run
     def auto_run(self):
         print("super fast")
 
-car = Car()
-car.run()
+# car = Car()
+# car.run()
 
-print("#####")
-toyota_car = ToyotaCar("Lexus")
-print(toyota_car.model)
-toyota_car.run()
+# print("#####")
+# toyota_car = ToyotaCar("Lexus")
+# print(toyota_car.model)
+# toyota_car.run()
+
+# tesla_car = TeslaCar("Model S")
+# print(tesla_car.model)
+# tesla_car.run()
+# tesla_car.auto_run()
 
 tesla_car = TeslaCar("Model S")
-print(tesla_car.model)
-tesla_car.run()
-tesla_car.auto_run()
+print(tesla_car.enable_auto_run)
