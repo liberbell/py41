@@ -5,3 +5,7 @@ class Person(object):
 class Car(object):
     def run(self):
         print("run")
+
+class PersonCarRobot(Person, Car):
+    def fly(self):
+        print("fly")
