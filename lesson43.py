@@ -7,9 +7,9 @@ class Person(object):
 
 class Car(object):
     def run(self):
-        print("run")
+        print("car run")
 
-class PersonCarRobot(Person, Car):
+class PersonCarRobot(Car, Person):
     def fly(self):
         print("fly")
 
