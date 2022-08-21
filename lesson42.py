@@ -60,14 +60,14 @@ class Adult(Person):
         else:
             raise ValueError
 
-    # def drive(self):
-    #     print("OK")
+    def drive(self):
+        print("OK")
 
 baby = Baby()
 # baby.drive()
 
 adult = Adult()
-# adult.drive()
+adult.drive()
 
 class Car(object):
     def __init__(self, model=None):
