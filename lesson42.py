@@ -39,7 +39,11 @@ class TeslaCar(Car):
     def __init__(self, model="Model S", enable_auto_run=False):
         # self.model = model
         super().__init__(model)
-        self.enable_auto_run = enable_auto_run
+        self._enable_auto_run = enable_auto_run
+
+    def enable_auto_run(self):
+        return self._enable_auto_run
+        
     def auto_run(self):
         print("super fast")
 
