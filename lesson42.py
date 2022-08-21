@@ -30,11 +30,12 @@ class Car(object):
         print("run")
 
 class ToyotaCar(Car):
-    pass
+    def run(self):
+        print("fast")
 
 class TeslaCar(Car):
     def auto_run(self):
-        print("Auto run")
+        print("super fast")
 
 car = Car()
 car.run()
