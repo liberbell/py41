@@ -39,9 +39,11 @@ class TeslaCar(Car):
 car = Car()
 car.run()
 
+print("#####")
 toyota_car = ToyotaCar()
 toyota_car.run()
 
 tesla_car = TeslaCar()
-tesla_car.auto_run()
+
 tesla_car.run()
+tesla_car.auto_run()
