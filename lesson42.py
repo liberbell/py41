@@ -1,13 +1,21 @@
+from curses import meta
 from logging import exception
-
+import abc
 
 s = "fkipqxjikrjlkjsfckcdf"
 
 # print(s.capitalize())
 
-class Person(object):
+# class Person(object):
+#     def __init__(self, age=1):
+#         self.age = age
+class person(meta=abc.ABCMeta):
     def __init__(self, age=1):
         self.age = age
+
+    @abc.abstractmethods
+    def drive(self):
+        pass
 
     # def drive(self):
     #     if self.age >= 18:
