@@ -58,3 +58,6 @@ class TeslaCar(Car):
 
 tesla_car = TeslaCar("Model S")
 print(tesla_car.enable_auto_run)
+
+tesla_car.enable_auto_run = True
+print(tesla_car.enable_auto_run)
