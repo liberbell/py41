@@ -116,4 +116,4 @@ car = Car()
 # t.price = 30000
 # print(t.name, t.price)
 
-car.ride(baby)
+car.ride(adult)
