@@ -82,4 +82,4 @@ class T(object):
 t = T()
 t.name = "APPLE"
 t.price = 30000
-print(t.name)
+print(t.name, t.price)
