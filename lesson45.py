@@ -6,6 +6,6 @@ class Person(object):
 
 
 a = Person()
-print(a.x)
+print(a.kind)
 b = Person
-print(b.x)
+print(b.kind)
