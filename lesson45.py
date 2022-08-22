@@ -4,8 +4,9 @@ class Person(object):
     def __init__(self) -> None:
         self.x = 100
 
+    @classmethod
     def what_is_your_kind(self):
-        return self.kind
+        return cls.kind
 
 
 a = Person()
