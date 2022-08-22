@@ -5,6 +5,8 @@ class Word(object):
     def __str__(self) -> str:
         return "Word!!!!!!"
 
+    def __len__(self):
+        return len(self.text)
 
 w = Word("test")
-print(w)
+print(len(w))
