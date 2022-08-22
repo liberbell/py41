@@ -1,7 +1,9 @@
 class Person(object):
+
+    kind = "human"
     
     def __init__(self, name):
-        self.kind = "human"
+        # self.kind = "human"
         self.name = name
 
     def who_are_you(self):
