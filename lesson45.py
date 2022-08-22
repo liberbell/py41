@@ -8,6 +8,10 @@ class Person(object):
     def what_is_your_kind(cls):
         return cls.kind
 
+    @staticmethod
+    def about():
+        print("about human")
+
 
 a = Person()
 print(a.what_is_your_kind())
@@ -16,3 +20,6 @@ print(b.what_is_your_kind())
 
 print(Person.kind)
 print(Person.what_is_your_kind())
+
+# print(Person.about())
+Person.about()
