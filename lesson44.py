@@ -16,7 +16,10 @@ b.who_are_you()
 
 class T(object):
 
-    words = []
+    def __init__(self):
+        self.words = []
+
+    # words = []
     
     def add_word(self, word):
         self.words.append(word)
@@ -28,4 +31,5 @@ print(c.words)
 
 d = T()
 d.add_word("add 3")
-print(c.words)
+d.add_word("add 4")
+print(d.words)
