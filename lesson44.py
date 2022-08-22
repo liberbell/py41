@@ -22,5 +22,5 @@ class T(object):
         self.words.append(word)
 
 c = T()
-c.add.word("add 1")
+c.add_word("add 1")
 print(c.words)
