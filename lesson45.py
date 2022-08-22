@@ -9,8 +9,8 @@ class Person(object):
         return cls.kind
 
     @staticmethod
-    def about():
-        print("about human")
+    def about(year):
+        print("about human {}".format(year))
 
 
 a = Person()
@@ -22,4 +22,4 @@ print(Person.kind)
 print(Person.what_is_your_kind())
 
 # print(Person.about())
-Person.about()
+Person.about(2022)
