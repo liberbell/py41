@@ -23,4 +23,9 @@ class T(object):
 
 c = T()
 c.add_word("add 1")
+c.add_word("add 2")
+print(c.words)
+
+d = T()
+d.add_word("add 3")
 print(c.words)
