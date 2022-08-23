@@ -1,3 +1,3 @@
 f = open("test.txt", "w")
-f.write("text insert")
+f.write("TEXT insert")
 f.close()
