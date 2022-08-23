@@ -13,7 +13,7 @@ class Word(object):
 
 w = Word("test")
 print(len(w))
-w2 = "######"
+w2 = Word("######")
 
 w + w2
 print(w + w2)
