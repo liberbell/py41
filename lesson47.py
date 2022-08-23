@@ -16,4 +16,9 @@ s = """\
     # print("I am print", file=f)
 
 with open("test.txt", "r") as f:
-    print(f.read())
+    # print(f.read())
+    while True:
+        line = f.readline()
+        print(line)
+        if not line:
+            break
