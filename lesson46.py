@@ -11,9 +11,14 @@ class Word(object):
     def __add__(self, word):
         return self.text.lower() + word.text.lower()
 
+    def __eq__(self, word):
+        return self.text.lower() == word.text.lower()
+
 w = Word("test")
 print(len(w))
 w2 = Word("######")
 
 w + w2
 print(w + w2)
+
+print(w == w2)
