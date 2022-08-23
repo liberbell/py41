@@ -16,9 +16,10 @@ class Word(object):
 
 w = Word("test")
 print(len(w))
-w2 = Word("######")
+w2 = Word("test")
 
 w + w2
 print(w + w2)
 
 print(w == w2)
+
