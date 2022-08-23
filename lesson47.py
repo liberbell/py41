@@ -1,5 +1,5 @@
 f = open("test.txt", "w")
 f.write("TEXT insert\n")
-print("I am print", file=f)
-print("My", "name", "is", "Bob", sep="#", end="!" file=f)
+# print("I am print", file=f)
+# print("My", "name", "is", "Bob", sep="#", end="!", file=f)
 f.close()
