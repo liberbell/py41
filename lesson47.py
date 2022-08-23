@@ -11,6 +11,9 @@ s = """\
     DDD
     """
 
-with open("test.txt", "w") as f:
-    f.write(s)
+# with open("test.txt", "w") as f:
+#     f.write(s)
     # print("I am print", file=f)
+
+with open("test.txt", "r") as f:
+    print(f.read())
