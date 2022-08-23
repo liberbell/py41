@@ -4,6 +4,13 @@
 # print("My", "name", "is", "Bob", sep="#", end="!", file=f)
 # f.close()
 
+s = """\
+    AAA
+    BBB
+    CCC
+    DDD
+    """
+
 with open("test.txt", "w") as f:
-    f.write("Text insert\n")
-    print("I am print", file=f)
+    f.write(s)
+    # print("I am print", file=f)
