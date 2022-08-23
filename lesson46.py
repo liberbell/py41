@@ -9,7 +9,7 @@ class Word(object):
         return len(self.text)
 
     def __add__(self, word):
-        self.text.lower() + word.text.lower()
+        return self.text.lower() + word.text.lower()
 
 w = Word("test")
 print(len(w))
