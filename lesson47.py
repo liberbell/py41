@@ -5,17 +5,17 @@
 # f.close()
 
 s = """\
-    AAA
-    BBB
-    CCC
-    DDD
-    """
+AAA
+BBB
+CCC
+DDD
+"""
 
 # with open("test.txt", "w") as f:
 #     f.write(s)
     # print("I am print", file=f)
 
-with open("test.txt", "r") as f:
+# with open("test.txt", "r") as f:
     # print(f.read())
     # while True:
     #     chunk = 2
@@ -24,13 +24,18 @@ with open("test.txt", "r") as f:
     #     if not line:
     #         break
 
-    print(f.tell())
-    print(f.read(1))
-    f.seek(5)
-    print(f.read(1))
-    f.seek(14)
-    print(f.read(1))
-    f.seek(15)
-    print(f.read(1))
-    f.seek(5)
-    print(f.read(1))
+    # print(f.tell())
+    # print(f.read(1))
+    # f.seek(5)
+    # print(f.read(1))
+    # f.seek(14)
+    # print(f.read(1))
+    # f.seek(15)
+    # print(f.read(1))
+    # f.seek(5)
+    # print(f.read(1))
+
+with open("test.txt", "w") as f:
+    f.write(s)
+    print(f.read())
+    # print("I am print", file=f)
