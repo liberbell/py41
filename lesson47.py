@@ -17,9 +17,14 @@ s = """\
 
 with open("test.txt", "r") as f:
     # print(f.read())
-    while True:
-        chunk = 2
-        line = f.readline(chunk)
-        print(line)
-        if not line:
-            break
+    # while True:
+    #     chunk = 2
+    #     line = f.readline(chunk)
+    #     print(line)
+    #     if not line:
+    #         break
+
+    print(f.tell())
+    print(f.read(1))
+    print(f.read(2))
+    print(f.read())
