@@ -35,9 +35,11 @@ DDD
     # f.seek(5)
     # print(f.read(1))
 
-with open("test2.txt", "r+") as f:
+with open("test.txt", "r+") as f:
     print(f.read())
+    f.seek(0)
     f.write(s)
+    print(f.read())
     # f.seek(0)
     # print(f.read())
     # print("I am print", file=f)
