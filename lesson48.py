@@ -1,11 +1,7 @@
 import string
 
-s = """\
-Hi $name.
-$contents
-Hava a good day.
-"""
+with open("design/email_template.txt", "r") as f:
+    t = string.Template(f.read())
 
-t = string.Template(s)
 content = t.substitute(name="Eric", contents="How are you")
 print(content)
