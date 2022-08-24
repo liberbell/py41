@@ -27,4 +27,3 @@ with open("test.txt", "r") as f:
     print(f.tell())
     print(f.read(1))
     print(f.read(2))
-    print(f.read())
