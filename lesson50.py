@@ -10,4 +10,8 @@ print(os.path.isdir("design"))
 # os.rmdir("test_dir")
 
 # pathlib.Path("empty.txt").touch()
-os.remove("empty.txt")
+# os.remove("empty.txt")
+
+os.mkdir("test_dir")
+os.mkdir("test_dir/test_dir2")
+print(os.listdir("test_dir"))
