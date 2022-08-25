@@ -1,3 +1,4 @@
+from asyncore import read
 import csv
 
 with open("test.csv", "w")as csv_file:
@@ -8,4 +9,6 @@ with open("test.csv", "w")as csv_file:
     writer.writerow({"Name": "B", "Count": "2"})
 
 with open("test.csv", "r") as csv_file:
-    reader = csv.DictReader()
+    reader = csv.DictReader(csv_file)
+    for row in reader:
+        print(row["Name"], row["Count"])
