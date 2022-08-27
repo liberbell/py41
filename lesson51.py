@@ -13,6 +13,6 @@ import glob
 with zipfile.ZipFile("test.zip", "w") as zip_file:
     # zip_file.write("test_dir")
     # zip_file.write("test_dir/test.txt")
-    for f in glob.glob("test.dir/**", recursive=True):
+    for f in glob.glob("test_dir/**", recursive=True):
         print(f)
         zip_file.write(f)
