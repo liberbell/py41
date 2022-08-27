@@ -11,4 +11,4 @@ import zipfile
 
 with zipfile.ZipFile("test.zip", "w") as zip_file:
     zip_file.write("test_dir")
-    zip_file.write("test_zip/test.txt")
+    zip_file.write("test_dir/test.txt")
