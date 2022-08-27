@@ -1,4 +1,4 @@
-import tarfile
+# import tarfile
 import zipfile
 
 # with tarfile.open("test.txt.gz", "w:gz") as tr:
@@ -10,4 +10,5 @@ import zipfile
 #         print(f.read())
 
 with zipfile.ZipFile("test.zip", "w") as zip_file:
-    z.write("test_dir")
+    zip_file.write("test_dir")
+    zip_file.write("test_zip/test.txt")
