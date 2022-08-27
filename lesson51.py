@@ -10,7 +10,7 @@ import glob
 #     with tr.extractfile("test_dir/sub_dir2/sub.txt") as f:
 #         print(f.read())
 
-with zipfile.ZipFile("test.zip", "w") as zip_file:
+# with zipfile.ZipFile("test.zip", "w") as zip_file:
     # zip_file.write("test_dir")
     # zip_file.write("test_dir/test.txt")
     # for f in glob.glob("test_dir/**", recursive=True):
