@@ -18,4 +18,6 @@ import glob
     #     zip_file.write(f)
 
 with zipfile.ZipFile("test.zip", "r") as zip_file:
-    zip_file.extractall("zzz2")
+    # zip_file.extractall("zzz2")
+    with zip_file.open("test_dir/test.txt") as f:
+        print(f.read())
