@@ -11,3 +11,9 @@ with tempfile.NamedTemporaryFile(delete=False) as t:
         f.write("test\n")
         f.seek(0)
         print(f.read())
+
+with tempfile.TemporaryDirectory() as td:
+    print(td)
+
+temp_dir = tempfile.mkdtemp()
+print(temp_dir)
