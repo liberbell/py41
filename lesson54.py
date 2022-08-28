@@ -32,4 +32,7 @@ print(time.time())
 
 file_name = "test.txt"
 if os.path.exists(file_name):
-    shutil.copy(file_name, "{}.{}".format(file_name, now.strftime("%d/%m/%y-%H%M%S%f")))
+    shutil.copy(file_name, "{}.{}".format(file_name, now.strftime("%Y_%m_%d-%H%M%S")))
+
+with open("file_name", "w") as f:
+    f.write("test")
