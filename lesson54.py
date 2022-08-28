@@ -1,5 +1,7 @@
 import datetime
 import time
+import os
+import shutil
 
 now = datetime.datetime.now()
 print(now)
@@ -27,3 +29,7 @@ print(now - d)
 # print("####")
 
 print(time.time())
+
+file_name = "test.txt"
+if os.path.exists(file_name):
+    shutil.copy(file_name, "{}.{}".format(file_name, now.strftime("%d/%m/%y-%H%M%S%f")))
