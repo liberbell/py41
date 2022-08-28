@@ -1,4 +1,4 @@
-import os
+# import os
 import csv
 
 name_input = input("Hello. I am Roboko. What is your name?")
