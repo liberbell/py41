@@ -22,6 +22,8 @@ d = datetime.timedelta(hours=1)
 d = datetime.timedelta(minutes=1)
 print(now - d)
 
-print("####")
-time.sleep(1)
-print("####")
+# print("####")
+# time.sleep(1)
+# print("####")
+
+print(time.time())
