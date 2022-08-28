@@ -8,3 +8,4 @@ print(recom_input)
 with open("ranking.csv", "w") as rank_csv:
     fieldnames = ["Name", "Count"]
     writer = csv.DictWriter(rank_csv, fieldnames=fieldnames)
+    writer.writeheader()
