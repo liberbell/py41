@@ -1,4 +1,5 @@
 import datetime
+from xml.dom import minicompat
 
 now = datetime.datetime.now()
 print(now)
@@ -15,5 +16,8 @@ print(t)
 print(t.isoformat())
 print(t.strftime("%H_%M_%S_%f"))
 
-d = datetime.timedelta(weeks=-1)
-print(now + d)
+d = datetime.timedelta(weeks=1)
+d = datetime.timedelta(days=1)
+d = datetime.timedelta(hours=1)
+d = datetime.timedelta(minutes=1)
+print(now - d)
