@@ -1,5 +1,5 @@
 import datetime
-from xml.dom import minicompat
+import time
 
 now = datetime.datetime.now()
 print(now)
@@ -21,3 +21,7 @@ d = datetime.timedelta(days=1)
 d = datetime.timedelta(hours=1)
 d = datetime.timedelta(minutes=1)
 print(now - d)
+
+print("####")
+time.sleep(1)
+print("####")
