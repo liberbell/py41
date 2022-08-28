@@ -1,5 +1,5 @@
 import subprocess
-import os
+# import os
 
-subprocess.run(["ls"])
-os.system("ls")
+subprocess.run("ls -al", shell=True)
+# os.system("ls")
