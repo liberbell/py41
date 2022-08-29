@@ -10,7 +10,9 @@ j = {
 
 print(j)
 print("####")
-print(json.dumps(j))
+# print(json.dumps(j))
+a = json.dumps(j)
+print(json.loads(a))
 
 # with open("test.json", "w") as json_file:
 #     json.dump(j, json_file)
