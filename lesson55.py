@@ -17,4 +17,4 @@ empoly_id.text = "222"
 empoly_id = ET.SubElement(employ, "name")
 empoly_id.text = "Alex"
 
-tree.write("test.xml", encoding=utf_8, xml_declaration=True) 
+tree.write("test.xml", encoding="utf_8", xml_declaration=True) 
