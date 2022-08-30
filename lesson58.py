@@ -1,3 +1,4 @@
+from socket import timeout
 import requests
 
 payload = {"key1": "value1", "key2": "value2"}
@@ -7,7 +8,7 @@ url2 = "https://httpbin.org/post"
 url3 = "https://httpbin.org/put"
 url4 = "https://httpbin.org/delete"
 
-r = requests.get(url1, params=payload)
+r = requests.get(url1, params=payload, timeout=0.001)
 # r = requests.post(url2, data=payload)
 # r = requests.put(url3, data=payload)
 # r = requests.delete(url4, data=payload)
