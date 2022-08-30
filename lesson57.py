@@ -18,3 +18,6 @@ print(url)
 
 payloads = json.dump(payloads).encode("utf-8")
 req = urllib.request.Request("https://httpbin.org/post", data=payloads, method="POST")
+
+with urllib.request.urlopen(req) as url_open:
+    print(url_open.read().decode("utf-8"))
