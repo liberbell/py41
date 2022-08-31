@@ -1,7 +1,7 @@
 import socket
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.bind("127.0.0.1", 50008)
+    s.bind(("127.0.0.1", 50008))
     s.listen(1)
     while True:
         conn, addr = s.accept()
