@@ -7,9 +7,13 @@ from flask import Response
 
 app = Flask(__name__)
 
-@app.route('/')
+# @app.route('/')
+# def hello_world():
+#     return "hello world"
+
+@app.route("/")
 def hello_world():
-    return "hello world"
+    return "<p>Hello world!</p>"
 
 def main():
     app.debug = True
