@@ -14,9 +14,9 @@ app = Flask(__name__)
 def hello_world():
     return "Top!"
 
-@app.route("/hello")
+@app.route("/hello/<username>")
 def hello_world2():
-    return "<p>Hello world!</p>"
+    return "<p>Hello world! {}</p>".format(username)
 
 def main():
     app.debug = True
