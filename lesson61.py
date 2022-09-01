@@ -15,7 +15,7 @@ def hello_world():
     return "Top!"
 
 @app.route("/hello/<username>")
-def hello_world2():
+def hello_world2(username):
     return "<p>Hello world! {}</p>".format(username)
 
 def main():
