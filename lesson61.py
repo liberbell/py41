@@ -8,12 +8,12 @@ from flask import Response
 app = Flask(__name__)
 
 @app.route('/')
-def top():
-    return "Top"
-
-@app.route('/hello')
 def hello_world():
-    return "hello world!"
+    return "hello world"
+
+# @app.route('/hello')
+# def hello_world():
+#     return "hello world!"
 
 # @app.route("/")
 # def hello_world():
