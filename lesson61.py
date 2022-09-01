@@ -1,3 +1,4 @@
+from crypt import methods
 from flask import Flask
 from flask import g
 from flask import render_template
@@ -20,6 +21,10 @@ def hello_world():
 def hello_world2(username=None):
     # return "<p>Hello world! {}</p>".format(username)
     return render_template("hello.html", username=username)
+
+@app.route("/post", methods=["POST", "PUT", "DELETE"])
+def show_post():
+    return str(request.values)
 
 
 def main():
