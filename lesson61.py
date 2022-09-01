@@ -1,4 +1,3 @@
-from unicodedata import name
 from flask import Flask
 from flask import g
 from flask import render_template
