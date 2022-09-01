@@ -6,17 +6,17 @@ from flask import Response
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello world!</p>"
-
-# @app.route('/hello')
-# def hello_world():
-#     return "hello world!"
-
 # @app.route("/")
 # def hello_world():
 #     return "<p>Hello world!</p>"
+
+@app.route('/top')
+def hello_world():
+    return "hello world!"
+
+@app.route("/hello")
+def hello_world2():
+    return "<p>Hello world!</p>"
 
 def main():
     app.debug = True
