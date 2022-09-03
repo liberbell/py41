@@ -29,6 +29,11 @@ def close_connection(exception):
 @app.route("/employee/<name>", methods=["GET"])
 def employee(name=None):
     if request.method == "GET":
+        db = get_db()
+        curs = db.cursor()
+        curs.execute(
+            "CREATE TABLE IF NOT EXITS persons( id INTEGER PRIMARY KEY AUTOINCREMENT, name STRING)"
+        )
         return name
 
 @app.route('/top')
