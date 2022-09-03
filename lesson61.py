@@ -42,6 +42,11 @@ def employee(name=None):
         user_id, name = person
         return "{}:{}".format(user_id, name), 200
 
+    if request.method == "POST":
+        curs.execute('INSERT INTO person(name) values("{}")'.format(name))
+        db.commit()
+        return "created {}".format(name), 201
+
 @app.route('/top')
 def hello_world():
     return "Top!"
