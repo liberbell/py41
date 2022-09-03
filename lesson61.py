@@ -24,7 +24,7 @@ def hello_world2(username=None):
 
 @app.route("/post", methods=["POST", "PUT", "DELETE"])
 def show_post():
-    return str(request.values)
+    return str(request.values["username"])
 
 
 def main():
