@@ -38,7 +38,9 @@ def employee(name=None):
         curs.execute('SELECT * FROM persons WHERE name ="{}"'.format(name))
         person = curs.fetchone()
         if not person:
-            return "None"
+            return "No", 404
+        user_id, name = person
+        return "{}:{}".format(user_id, name), 200
 
 @app.route('/top')
 def hello_world():
