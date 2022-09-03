@@ -35,7 +35,7 @@ def employee(name=None):
     )
     name = request.values.get("name", name)
     if request.method == "GET":
-        return name
+        curs.execute('SELECT * FROM persons WHERE name ="{}"'.format(name))
 
 @app.route('/top')
 def hello_world():
