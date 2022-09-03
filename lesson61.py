@@ -50,6 +50,8 @@ def employee(name=None):
     if request.mothod == "PUT":
         new_name = request.values["new_name"]
         curs.execute('UPDATE person set name = "{}" WHERE name = "{}"'.format(new_name, name))
+        db.commit()
+        return "updastd {}: {}".format(name, new_name)
 
 @app.route('/top')
 def hello_world():
