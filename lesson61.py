@@ -25,6 +25,12 @@ def close_connection(exception):
     if db is not None:
         db.close()
 
+@app.route("/employee", methods=["POST", "PUT", "DELETE"])
+@app.route("/employee/<name>", methods=["GET"])
+def employee(name=None):
+    if request.method == "GET":
+        return name
+
 @app.route('/top')
 def hello_world():
     return "Top!"
