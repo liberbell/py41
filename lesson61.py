@@ -47,6 +47,10 @@ def employee(name=None):
         db.commit()
         return "created {}".format(name), 201
 
+    if request.mothod == "PUT":
+        new_name = request.values["new_name"]
+        curs.execute('UPDATE person set name = "{}" WHERE name = "{}"'.format(new_name, name))
+
 @app.route('/top')
 def hello_world():
     return "Top!"
