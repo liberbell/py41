@@ -5,7 +5,10 @@ class Cal(object):
     """Add and double
     >>> c = Cal()
     >>> c.add_num_and_double(1, 1)
-    5
+    4
+
+    >>> c.add_num_and_double("1", "1")
+    4
     """
 
     def add_num_and_double(self, x, y):
