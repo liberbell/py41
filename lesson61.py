@@ -47,7 +47,7 @@ def employee(name=None):
         db.commit()
         return "created {}".format(name), 201
 
-    if request.mothod == "PUT":
+    if request.method == "PUT":
         new_name = request.values["new_name"]
         curs.execute('UPDATE persons set name = "{}" WHERE name = "{}"'.format(new_name, name))
         db.commit()
