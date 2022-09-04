@@ -31,7 +31,7 @@ def employee(name=None):
     db = get_db()
     curs = db.cursor()
     curs.execute(
-        "CREATE TABLE IF NOT EXITS persons( id INTEGER PRIMARY KEY AUTOINCREMENT, name STRING)"
+        "CREATE TABLE IF NOT EXISTS persons( id INTEGER PRIMARY KEY AUTOINCREMENT, name STRING)"
     )
     name = request.values.get("name", name)
     if request.method == "GET":
