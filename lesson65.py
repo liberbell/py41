@@ -2,6 +2,11 @@ from pydoc import doc
 
 
 class Cal(object):
+    """Add and double
+    >>> c = Cal()
+    >>> c.add_num_and_double(1, 1)
+    5
+    """
 
     def add_num_and_double(self, x, y):
         result = x + y
