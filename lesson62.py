@@ -7,4 +7,4 @@ html = requests.get("https://www.python.org")
 soup = BeautifulSoup(html.text, "lxml")
 
 titles = soup.find_all("title")
-print(titles)
+print(titles[0].text)
