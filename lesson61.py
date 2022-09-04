@@ -58,6 +58,8 @@ def employee(name=None):
         db.commit()
         return "deleted {}".format(name), 200
 
+    curs.close()
+
 @app.route('/top')
 def hello_world():
     return "Top!"
