@@ -51,7 +51,12 @@ def employee(name=None):
         new_name = request.values["new_name"]
         curs.execute('UPDATE person set name = "{}" WHERE name = "{}"'.format(new_name, name))
         db.commit()
-        return "updastd {}: {}".format(name, new_name)
+        return "updastd {}: {}".format(name, new_name), 200
+
+    if request.method == "DELETE":
+        curs.execute('DELETE from persons WHERE name = "{}"'.format(name))
+        db.commit()
+        return "deleted {}".format(name), 200
 
 @app.route('/top')
 def hello_world():
