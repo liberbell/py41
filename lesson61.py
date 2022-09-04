@@ -43,13 +43,13 @@ def employee(name=None):
         return "{}:{}".format(user_id, name), 200
 
     if request.method == "POST":
-        curs.execute('INSERT INTO person(name) values("{}")'.format(name))
+        curs.execute('INSERT INTO persons(name) values("{}")'.format(name))
         db.commit()
         return "created {}".format(name), 201
 
     if request.mothod == "PUT":
         new_name = request.values["new_name"]
-        curs.execute('UPDATE person set name = "{}" WHERE name = "{}"'.format(new_name, name))
+        curs.execute('UPDATE persons set name = "{}" WHERE name = "{}"'.format(new_name, name))
         db.commit()
         return "updastd {}: {}".format(name, new_name), 200
 
