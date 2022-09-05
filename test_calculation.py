@@ -6,6 +6,10 @@ class CalTest(unittest.TestCase):
         print("setup")
         self.cal = calculation.Cal()
 
+    def tearDown(self):
+        print("clean up")
+        del self.cal
+
     def test_add_num_and_double(self):
         self.assertEqual(self.add_num_and_double(1, 1), 4)
 
