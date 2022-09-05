@@ -7,7 +7,7 @@ class CalTest(unittest.TestCase):
         self.cal = calculation.Cal()
 
     def test_add_num_and_double(self):
-        self.assertEqual(self.cal.add_num_and_double(1, 1), 4)
+        self.assertEqual(self.add_num_and_double(1, 1), 4)
 
     def test_add_num_and_double_raise(self):
         cal = calculation.Cal()
