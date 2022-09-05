@@ -11,12 +11,11 @@ class CalTest(unittest.TestCase):
         del self.cal
 
     def test_add_num_and_double(self):
-        self.assertEqual(self.add_num_and_double(1, 1), 4)
+        self.assertEqual(self.cal.add_num_and_double(1, 1), 4)
 
     def test_add_num_and_double_raise(self):
-        cal = calculation.Cal()
         with self.assertRaises(ValueError):
-            cal.add_num_and_double("1", "1")
+            self.cal.add_num_and_double("1", "1")
 
 
 if __name__ == "__main__":
