@@ -9,10 +9,9 @@ class Cal(object):
         4
 
         >>> c.add_num_and_double("1", "1")
-        Traceback (most recent call last)
+        Traceback (most recent call last):
         ...
         ValueError
-        4
         """
         if type(x) is not int or type(y) is not int:
             raise ValueError
