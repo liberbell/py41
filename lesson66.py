@@ -3,10 +3,18 @@ import calculation
 
 
 class TestCal(object):
+
+    @classmethod
+    def setup_class(cls):
+        cls.cal = calculation.Cal()
+
+    @classmethod
+    def teardown_class(cls):
+        del cls.cal
     
     def setup_method(self, method):
         print("Method: {}".format(method.__name__))
-        self.cal = calculation.Cal()
+        # self.cal = calculation.Cal()
 
     def teardown_method(self, method):
         print("Method: {}".format(method.__name__))
