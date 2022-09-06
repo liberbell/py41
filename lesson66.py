@@ -7,6 +7,7 @@ class TestCal(object):
         cal = calculation.Cal()
         assert cal.add_num_and_double(1, 1) == 4
 
-    # def test_add_num_and_double_raise(self):
-    #     with pytest.raises(ValueError):
-    #         self.cal.add_num_and_doubule("1", "1")
+    def test_add_num_and_double_raise(self):
+        with pytest.raises(ValueError):
+            cal = calculation.Cal()
+            cal.add_num_and_doubule("1", "1")
