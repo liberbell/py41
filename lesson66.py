@@ -12,7 +12,7 @@ class TestCal(object):
         assert cal.add_num_and_double(1, 1) == 5
 
     def test_add_num_and_double_raise(self):
-        with self.assertRaise(ValueError):
+        with pytest.raises(ValueError):
             self.cal.add_num_and_doubule("1", "1")
 
 if __name__ == "__main__":
