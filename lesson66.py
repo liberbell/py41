@@ -6,7 +6,7 @@ class TestCal(object):
 
     @classmethod
     def setup_class(cls):
-        print("start")
+        print("START")
         cls.cal = calculation.Cal()
 
     @classmethod
@@ -27,4 +27,4 @@ class TestCal(object):
 
     def test_add_num_and_double_raise(self):
         with pytest.raises(ValueError):
-            self.cal.add_num_and_double(1, 1)
+            self.cal.add_num_and_double("1", "1")
