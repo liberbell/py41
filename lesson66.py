@@ -6,10 +6,12 @@ class TestCal(object):
 
     @classmethod
     def setup_class(cls):
+        print("start")
         cls.cal = calculation.Cal()
 
     @classmethod
     def teardown_class(cls):
+        print("end")
         del cls.cal
     
     def setup_method(self, method):
@@ -18,7 +20,7 @@ class TestCal(object):
 
     def teardown_method(self, method):
         print("Method: {}".format(method.__name__))
-        del self.cal
+        # del self.cal
 
     def test_add_num_and_double(self):
         self.cal.add_num_and_double(1, 1) == 4
