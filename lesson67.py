@@ -18,4 +18,5 @@ class TestCal(object):
         assert self.cal.add_num_and_double(1, 1) == 4
 
     def test_save(self, tmpdir):
+        self.cal.save(tmpdir, self.test_file_name)
 
