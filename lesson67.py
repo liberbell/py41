@@ -1,5 +1,7 @@
+from tempfile import tempdir
 import pytest
 import calculation
+import os
 
 class TestCal(object):
 
@@ -19,4 +21,6 @@ class TestCal(object):
 
     def test_save(self, tmpdir):
         self.cal.save(tmpdir, self.test_file_name)
+        test_file_path = os.path.join(tempdir, self.test_file_name)
+        assert os.path.exists(test_file_path) is True
 
