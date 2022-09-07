@@ -8,6 +8,7 @@ class TestCal(object):
         cls.cal = calculation.Cal()
 
     def test_add_num_and_double(self):
+        os_name = "mac"
         if os_name == "mac":
             print("ls")
         elif os_name == "windows":
