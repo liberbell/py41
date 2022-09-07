@@ -20,6 +20,7 @@ class TestCal(object):
         assert self.cal.add_num_and_double(1, 1) == 4
 
     def test_save(self, tmpdir):
+        print(self.test_file_name)
         self.cal.save(tmpdir, self.test_file_name)
         test_file_path = os.path.join(tempdir, self.test_file_name)
         assert os.path.exists(test_file_path) is True
