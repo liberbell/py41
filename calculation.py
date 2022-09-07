@@ -1,3 +1,5 @@
+import os
+
 class Cal(object):
     def add_num_and_double(self, x, y):
 
@@ -6,3 +8,6 @@ class Cal(object):
         result = x + y
         result *= 2
         return result
+
+    def save(self, dir_path, file_name):
+        if not os.path.exists(dir_path):
