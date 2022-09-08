@@ -9,5 +9,6 @@ setup(
     author="liber",
     author_email="example@example.com",
     install_requires={"termcolor"},
-    description="roboter description"
+    description="roboter description",
+    test_suits="tests"
 )
