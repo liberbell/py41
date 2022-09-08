@@ -5,4 +5,9 @@ setup(
     version="0.0.1",
     packages=find_packages(),
     package_data={"roboter": ["templates/*.txt"]},
+    license="MIT",
+    author="liber",
+    author_email="example@example.com",
+    install_requires={"termcolor"},
+    description="roboter description"
 )
