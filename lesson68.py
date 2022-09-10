@@ -18,13 +18,16 @@ def worker2():
     logging.debug("end")
 
 if __name__ == "__main__":
-    threads = []
+    # threads = []
     for _ in range(5):
         t = threading.Thread(target=worker1)
         t.setDaemon(True)
         t.start()
-        threads.append(t)
-    for thread in threads:
+        # threads.append(t)
+    for thread in threading.enumerate():
+        if thread is threading.current_thread():
+            print(thread)
+            continue
         thread.join()
     # t1 = threading.Thread(target=worker1)
     # t1.setDaemon(True)
