@@ -19,6 +19,7 @@ def worker2():
 
 if __name__ == "__main__":
     t1 = threading.Thread(target=worker1)
+    t1.setDaemon(True)
     t2 = threading.Thread(target=worker2)
     t1.start()
     t2.start()
