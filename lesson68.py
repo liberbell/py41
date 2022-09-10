@@ -1,6 +1,7 @@
 from distutils.log import debug
 from doctest import master
 import logging
+from os import rename
 import threading
 import time
 
@@ -21,7 +22,7 @@ def worker2():
     # print(threading.currentThread().getName(), "end")
 
 if __name__ == "__main__":
-    t1 = threading.Thread(target=worker1)
+    t1 = threading.Thread(name="rename worker1", target=worker1)
     t2 = threading.Thread(target=worker2)
     t1.start()
     t2.start()
