@@ -16,6 +16,8 @@ def worker1():
 
 def worker2(x, y=1):
     logging.debug("start")
+    logging.debug(x)
+    logging.debug(y)
     # print(threading.currentThread().getName(), "start")
     time.sleep(0.5)
     logging.debug("end")
