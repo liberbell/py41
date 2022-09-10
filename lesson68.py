@@ -23,6 +23,9 @@ if __name__ == "__main__":
         t = threading.Thread(target=worker1)
         t.setDaemon()
         t.start()
+        threads.append(t)
+    for thread in threads:
+        thread.join()
     # t1 = threading.Thread(target=worker1)
     # t1.setDaemon(True)
     # t2 = threading.Thread(target=worker2)
