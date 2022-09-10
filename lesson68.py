@@ -21,7 +21,7 @@ if __name__ == "__main__":
     threads = []
     for _ in range(5):
         t = threading.Thread(target=worker1)
-        t.setDaemon()
+        t.setDaemon(True)
         t.start()
         threads.append(t)
     for thread in threads:
