@@ -1,11 +1,14 @@
 import threading
+import time
 
 def worker1():
     print(threading.currentThread().getName(), "start")
+    time.sleep(0.5)
     print(threading.currentThread().getName(), "end")
 
 def worker2():
     print(threading.currentThread().getName(), "start")
+    time.sleep(0.5)
     print(threading.currentThread().getName(), "end")
 
 if __name__ == "__main__":
