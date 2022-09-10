@@ -14,7 +14,7 @@ def worker1():
     logging.debug("end")
     # print(threading.currentThread().getName(), "end")
 
-def worker2():
+def worker2(x, y=1):
     logging.debug("start")
     # print(threading.currentThread().getName(), "start")
     time.sleep(0.5)
@@ -23,7 +23,7 @@ def worker2():
 
 if __name__ == "__main__":
     t1 = threading.Thread(name="rename worker1", target=worker1)
-    t2 = threading.Thread(target=worker2)
+    t2 = threading.Thread(target=worker2, args=(100, ))
     t1.start()
     t2.start()
     print("started")
