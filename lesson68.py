@@ -18,7 +18,7 @@ def worker2():
     logging.debug("end")
 
 if __name__ == "__main__":
-    t = threading.Timer(3, worker1)
+    t = threading.Timer(3, worker1, args=(100,), kwargs={"y": 200})
     t.start()
     # threads = []
     # for _ in range(5):
