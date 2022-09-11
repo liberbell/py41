@@ -7,8 +7,10 @@ import time
 
 logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
 
-def worker1():
+def worker1(x, y=1):
     logging.debug("start")
+    logging.debug(x)
+    logging.debug(y)
     time.sleep(5)
     logging.debug("end")
 
