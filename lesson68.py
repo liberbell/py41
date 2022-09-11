@@ -7,7 +7,7 @@ import time
 
 logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
 
-def worker1(d):
+def worker1(d, lock):
     logging.debug("start")
     i = d["x"]
     d["x"] = i + 1
@@ -15,7 +15,7 @@ def worker1(d):
     logging.debug(d)
     logging.debug("end")
 
-def worker2(d):
+def worker2(d, lock):
     logging.debug("start")
     i = d["x"]
     d["x"] = i + 1
