@@ -14,14 +14,16 @@ def worker1(x, y=1):
     time.sleep(5)
     logging.debug("end")
 
-def worker2():
+def worker2(d):
     logging.debug("start")
-    time.sleep(2)
+    i = d["x"]
+    d["x"] = i + 1
+    # time.sleep(2)
     logging.debug("end")
 
 if __name__ == "__main__":
-    t = threading.Timer(3, worker1, args=(100,), kwargs={"y": 200})
-    t.start()
+    # t = threading.Timer(3, worker1, args=(100,), kwargs={"y": 200})
+    # t.start()
     # threads = []
     # for _ in range(5):
     #     t = threading.Thread(target=worker1)
@@ -33,10 +35,11 @@ if __name__ == "__main__":
     #         print(thread)
     #         continue
     #     thread.join()
-    # t1 = threading.Thread(target=worker1)
+    d = {"x": 0}
+    t1 = threading.Thread(target=worker1, args=(d, ))
     # t1.setDaemon(True)
-    # t2 = threading.Thread(target=worker2)
-    # t1.start()
-    # t2.start()
+    t2 = threading.Thread(target=worker2, args=(d, ))
+    t1.start()
+    t2.start()
     # print("started")
     # t1.join()
