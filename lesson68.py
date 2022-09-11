@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
 def worker1(d, lock):
     logging.debug("start")
     # lock.acquire()
-    with lock():
+    with lock:
         i = d["x"]
         d["x"] = i + 1
         time.sleep(2)
