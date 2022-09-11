@@ -23,7 +23,7 @@ if __name__ == "__main__":
         t = threading.Thread(target=worker1)
         t.setDaemon(True)
         t.start()
-
+    print(threading.enumerate())
     for thread in threading.enumerate():
         if thread is threading.current_thread():
             print(thread)
