@@ -14,15 +14,29 @@ def worker1(lock):
     # lock.release()
     logging.debug("end")
 
-def worker2(d, lock):
+def worker2(lock):
+    # lock.acquire()
     logging.debug("start")
-    lock.acquire()
-    i = d["x"]
-    d["x"] = i + 1
-    # time.sleep(2)
-    logging.debug(d)
-    lock.release()
+    time.sleep(2)
+    # lock.release()
     logging.debug("end")
+
+def worker3(lock):
+    # lock.acquire()
+    logging.debug("start")
+    time.sleep(2)
+    # lock.release()
+    logging.debug("end")
+
+# def worker2(d, lock):
+#     logging.debug("start")
+#     lock.acquire()
+#     i = d["x"]
+#     d["x"] = i + 1
+#     # time.sleep(2)
+#     logging.debug(d)
+#     lock.release()
+#     logging.debug("end")
 
 if __name__ == "__main__":
     # t = threading.Timer(3, worker1, args=(100,), kwargs={"y": 200})
@@ -38,11 +52,12 @@ if __name__ == "__main__":
     #         print(thread)
     #         continue
     #     thread.join()
-    d = {"x": 0}
+    # d = {"x": 0}
     lock = threading.RLock()
-    t1 = threading.Thread(target=worker1, args=(d, lock))
+    t1 = threading.Thread(target=worker1, args=(lock))
     # t1.setDaemon(True)
-    t2 = threading.Thread(target=worker2, args=(d, lock))
+    t2 = threading.Thread(target=worker2, args=(lock))
+    t3 = threading.Thread(target=worker3, args=(lock))
     t1.start()
     t2.start()
     # print("started")
