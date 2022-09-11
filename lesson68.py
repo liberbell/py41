@@ -19,6 +19,7 @@ def worker2(d):
     i = d["x"]
     d["x"] = i + 1
     # time.sleep(2)
+    logging.debug(d)
     logging.debug("end")
 
 if __name__ == "__main__":
