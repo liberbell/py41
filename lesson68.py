@@ -9,12 +9,13 @@ logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
 
 def worker1(d, lock):
     logging.debug("start")
-    lock.acquire()
-    i = d["x"]
-    d["x"] = i + 1
-    # time.sleep(2)
-    logging.debug(d)
-    lock.release()
+    # lock.acquire()
+    with lock():
+        i = d["x"]
+        d["x"] = i + 1
+        time.sleep(2)
+        logging.debug(d)
+    # lock.release()
     logging.debug("end")
 
 def worker2(d, lock):
