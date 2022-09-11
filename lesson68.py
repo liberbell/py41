@@ -45,7 +45,7 @@ if __name__ == "__main__":
     #         continue
     #     thread.join()
     d = {"x": 0}
-    lock = threading.Lock()
+    lock = threading.RLock()
     t1 = threading.Thread(target=worker1, args=(d, lock))
     # t1.setDaemon(True)
     t2 = threading.Thread(target=worker2, args=(d, lock))
