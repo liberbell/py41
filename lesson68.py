@@ -7,16 +7,10 @@ import time
 
 logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
 
-def worker1(d, lock):
-    logging.debug("start")
+def worker1(lock):
     # lock.acquire()
-    with lock:
-        i = d["x"]
-        d["x"] = i + 1
-        time.sleep(2)
-        logging.debug(d)
-        with lock:
-            d["x"] = i + 1
+    logging.debug("start")
+    time.sleep(2)
     # lock.release()
     logging.debug("end")
 
