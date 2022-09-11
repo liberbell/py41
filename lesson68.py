@@ -7,7 +7,7 @@ import time
 
 logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
 
-def worker1(x, y=1):
+def worker1(d):
     logging.debug("start")
     i = d["x"]
     d["x"] = i + 1
@@ -38,9 +38,10 @@ if __name__ == "__main__":
     #         continue
     #     thread.join()
     d = {"x": 0}
-    t1 = threading.Thread(target=worker1, args=(d, ))
+    lock = threading.Lock()
+    t1 = threading.Thread(target=worker1, args=(d, lock))
     # t1.setDaemon(True)
-    t2 = threading.Thread(target=worker2, args=(d, ))
+    t2 = threading.Thread(target=worker2, args=(d, lock))
     t1.start()
     t2.start()
     # print("started")
