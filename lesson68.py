@@ -61,13 +61,15 @@ if __name__ == "__main__":
     #     thread.join()
     # d = {"x": 0}
     queue = queue.Queue()
+    for i in range(10):
+        queue.put(i)
     # semaphore = threading.Semaphore(2)
     t1 = threading.Thread(target=worker1, args=(queue,))
     # t1.setDaemon(True)
-    t2 = threading.Thread(target=worker2, args=(queue,))
+    # t2 = threading.Thread(target=worker2, args=(queue,))
     # t3 = threading.Thread(target=worker3, args=(semaphore,))
     t1.start()
-    t2.start()
+    # t2.start()
     # t3.start()
     # print("started")
     # t1.join()
