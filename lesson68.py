@@ -74,6 +74,7 @@ if __name__ == "__main__":
     # t2 = threading.Thread(target=worker2, args=(queue,))
     # t3 = threading.Thread(target=worker3, args=(semaphore,))
     t1.start()
+    queue.put(None)
     # t2.start()
     # t3.start()
     # print("started")
