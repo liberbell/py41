@@ -70,6 +70,7 @@ if __name__ == "__main__":
     queue = queue.Queue()
     for i in range(1000):
         queue.put(i)
+    ts = []
     # semaphore = threading.Semaphore(2)
     for _ in range(3):
         t1 = threading.Thread(target=worker1, args=(queue,))
@@ -77,10 +78,12 @@ if __name__ == "__main__":
     # t2 = threading.Thread(target=worker2, args=(queue,))
     # t3 = threading.Thread(target=worker3, args=(semaphore,))
         t1.start()
+        ts.append(t)
     logging.debug("Tasks are not done.")
     queue.join()
     logging.debug("Tasks are done.")
     queue.put(None)
+    [t.join() for t in ts]
     # t2.start()
     # t3.start()
     # print("started")
