@@ -9,19 +9,19 @@ import time
 
 logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
 
-def worker1():
+def worker1(event):
     event.wait()
     logging.debug("start")
     time.sleep(3)
     logging.debug("end")
 
-def worker2():
+def worker2(event):
     event.wait()
     logging.debug("start")
     time.sleep(3)
     logging.debug("end")
 
-def worker3():
+def worker3(event)):
     logging.debug("start")
     logging.debug("end")
     event.set()
