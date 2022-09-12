@@ -28,7 +28,7 @@ def worker3(condition):
         logging.debug("start")
         time.sleep(2)
         logging.debug("end")
-        condition.set()
+        condition.notifyAll()
 
 # def worker2(queue):
 #     # lock.acquire()
