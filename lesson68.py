@@ -82,4 +82,4 @@ if __name__ == "__main__":
     # t2.start()
     # t3.start()
     # print("started")
-    # t1.join()
+    t1.join()
