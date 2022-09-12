@@ -60,5 +60,6 @@ if __name__ == "__main__":
     t3 = threading.Thread(target=worker3, args=(lock,))
     t1.start()
     t2.start()
+    t3.start()
     # print("started")
     # t1.join()
