@@ -52,7 +52,7 @@ if __name__ == "__main__":
     #         print(thread)
     #         continue
     #     thread.join()
-    # d = {"x": 0}
+    d = {"x": 0}
     lock = threading.RLock()
     t1 = threading.Thread(target=worker1, args=(lock,))
     # t1.setDaemon(True)
