@@ -7,27 +7,27 @@ import time
 
 logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
 
-def worker1(lock):
+def worker1(queue):
     # lock.acquire()
     logging.debug("start")
     time.sleep(2)
     # lock.release()
     logging.debug("end")
 
-def worker2(lock):
+def worker2(queue):
     # lock.acquire()
     logging.debug("start")
     time.sleep(2)
     # lock.release()
     logging.debug("end")
 
-def worker3(lock):
-    with semaphore:
-        # lock.acquire()
-        logging.debug("start")
-        time.sleep(2)
-        # lock.release()
-        logging.debug("end")
+# def worker3(lock):
+#     with semaphore:
+#         # lock.acquire()
+#         logging.debug("start")
+#         time.sleep(2)
+#         # lock.release()
+#         logging.debug("end")
 
 # def worker2(d, lock):
 #     logging.debug("start")
@@ -58,9 +58,9 @@ if __name__ == "__main__":
     t1 = threading.Thread(target=worker1, args=(semaphore,))
     # t1.setDaemon(True)
     t2 = threading.Thread(target=worker2, args=(semaphore,))
-    t3 = threading.Thread(target=worker3, args=(semaphore,))
+    # t3 = threading.Thread(target=worker3, args=(semaphore,))
     t1.start()
     t2.start()
-    t3.start()
+    # t3.start()
     # print("started")
     # t1.join()
