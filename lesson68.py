@@ -82,7 +82,8 @@ if __name__ == "__main__":
     logging.debug("Tasks are not done.")
     queue.join()
     logging.debug("Tasks are done.")
-    queue.put(None)
+    for _ in range(len(ts)):
+        queue.put(None)
     [t.join() for t in ts]
     # t2.start()
     # t3.start()
