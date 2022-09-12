@@ -16,6 +16,7 @@ def worker1(queue):
         if item is None:
             break
         logging.debug(item)
+        queue.task_done()
     # queue.put(100)
     # queue.put(200)
     # time.sleep(2)
