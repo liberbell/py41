@@ -12,6 +12,7 @@ def worker1(queue):
     # lock.acquire()
     logging.debug("start")
     queue.put(100)
+    queue.put(200)
     time.sleep(2)
     # lock.release()
     logging.debug("end")
@@ -20,6 +21,7 @@ def worker2(queue):
     # lock.acquire()
     logging.debug("start")
     time.sleep(2)
+    print(queue.get())
     # lock.release()
     logging.debug("end")
 
