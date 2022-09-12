@@ -9,26 +9,28 @@ import time
 
 logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
 
-def worker1(condition):
-    with condition:
-        condition.wait()
+def worker1(barrier):
+    r = barrier.wait()
+    logging.debug("num={}".format(r))
+    while True:
         logging.debug("start")
         time.sleep(3)
         logging.debug("end")
 
-def worker2(condition):
-    with condition:
-        condition.wait()
+def worker2(barrier):
+    r = barrier.wait()
+    logging.debug("num={}".format(r))
+    while True:
         logging.debug("start")
         time.sleep(3)
         logging.debug("end")
 
-def worker3(condition):
-    with condition:
+def worker3(barrier):
+    with barrier:
         logging.debug("start")
         time.sleep(2)
         logging.debug("end")
-        condition.notifyAll()
+        barrier.notifyAll()
 
 # def worker2(queue):
 #     # lock.acquire()
@@ -59,10 +61,10 @@ def worker3(condition):
 #     logging.debug("end")
 
 if __name__ == "__main__":
-    condition = threading.Condition()
-    t1 = threading.Thread(target=worker1, args=(condition,))
-    t2 = threading.Thread(target=worker2, args=(condition,))
-    t3 = threading.Thread(target=worker3, args=(condition,))
+    barrier = threading.Barrier(2)
+    t1 = threading.Thread(target=worker1, args=barrier,))
+    t2 = threading.Thread(target=worker2, args=(barrier,))
+    # t3 = threading.Thread(target=worker3, args=(barrier,))
     t1.start()
     t2.start()
-    t3.start()
+    # t3.start()
