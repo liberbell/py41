@@ -78,13 +78,13 @@ if __name__ == "__main__":
     # t2 = threading.Thread(target=worker2, args=(queue,))
     # t3 = threading.Thread(target=worker3, args=(semaphore,))
         t1.start()
-        ts.append(t)
+        ts.append(t1)
     logging.debug("Tasks are not done.")
     queue.join()
     logging.debug("Tasks are done.")
     for _ in range(len(ts)):
         queue.put(None)
-    [t.join() for t in ts]
+    [t1.join() for t1 in ts]
     # t2.start()
     # t3.start()
     # print("started")
