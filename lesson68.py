@@ -2,6 +2,7 @@ from distutils.log import debug
 from doctest import master
 import logging
 from os import rename
+import queue
 import threading
 import time
 
@@ -10,6 +11,7 @@ logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
 def worker1(queue):
     # lock.acquire()
     logging.debug("start")
+    queue.put(100)
     time.sleep(2)
     # lock.release()
     logging.debug("end")
@@ -53,11 +55,12 @@ if __name__ == "__main__":
     #         print(thread)
     #         continue
     #     thread.join()
-    d = {"x": 0}
-    semaphore = threading.Semaphore(2)
-    t1 = threading.Thread(target=worker1, args=(semaphore,))
+    # d = {"x": 0}
+    queue = queue.Queue()
+    # semaphore = threading.Semaphore(2)
+    t1 = threading.Thread(target=worker1, args=(queue,))
     # t1.setDaemon(True)
-    t2 = threading.Thread(target=worker2, args=(semaphore,))
+    t2 = threading.Thread(target=worker2, args=(queue,))
     # t3 = threading.Thread(target=worker3, args=(semaphore,))
     t1.start()
     t2.start()
