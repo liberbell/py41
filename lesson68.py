@@ -20,6 +20,7 @@ def worker1(queue):
     # queue.put(200)
     # time.sleep(2)
     # lock.release()
+    logging.debug("Too longggggg.")
     logging.debug("end")
 
 def worker2(queue):
@@ -74,6 +75,8 @@ if __name__ == "__main__":
     # t2 = threading.Thread(target=worker2, args=(queue,))
     # t3 = threading.Thread(target=worker3, args=(semaphore,))
     t1.start()
+    logging.debug("Tasks are not done.")
+    queue.join()
     queue.put(None)
     # t2.start()
     # t3.start()
