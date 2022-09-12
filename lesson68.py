@@ -23,6 +23,7 @@ def worker2(event):
 
 def worker3(event):
     logging.debug("start")
+    time.sleep(2)
     logging.debug("end")
     event.set()
 
