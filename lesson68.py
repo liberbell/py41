@@ -22,6 +22,7 @@ def worker2(queue):
     logging.debug("start")
     time.sleep(2)
     print(queue.get())
+    print(queue.get())
     # lock.release()
     logging.debug("end")
 
