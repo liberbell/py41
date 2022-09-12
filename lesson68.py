@@ -57,8 +57,8 @@ def worker3():
 if __name__ == "__main__":
     event = threading.Event()
     t1 = threading.Thread(target=worker1, args=(event,))
-    t2 = threading.Thread(target=worker1, args=(event,))
-    t3 = threading.Thread(target=worker1, args=(event,))
+    t2 = threading.Thread(target=worker2, args=(event,))
+    t3 = threading.Thread(target=worker3, args=(event,))
     t1.start()
     t2.start()
     t3.start()
