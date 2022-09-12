@@ -54,10 +54,10 @@ if __name__ == "__main__":
     #     thread.join()
     # d = {"x": 0}
     lock = threading.RLock()
-    t1 = threading.Thread(target=worker1, args=(lock))
+    t1 = threading.Thread(target=worker1, args=(lock,))
     # t1.setDaemon(True)
-    t2 = threading.Thread(target=worker2, args=(lock))
-    t3 = threading.Thread(target=worker3, args=(lock))
+    t2 = threading.Thread(target=worker2, args=(lock,))
+    t3 = threading.Thread(target=worker3, args=(lock,))
     t1.start()
     t2.start()
     # print("started")
