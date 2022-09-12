@@ -68,14 +68,15 @@ if __name__ == "__main__":
     #     thread.join()
     # d = {"x": 0}
     queue = queue.Queue()
-    for i in range(10):
+    for i in range(1000):
         queue.put(i)
     # semaphore = threading.Semaphore(2)
-    t1 = threading.Thread(target=worker1, args=(queue,))
+    for _ in range(3):
+        t1 = threading.Thread(target=worker1, args=(queue,))
     # t1.setDaemon(True)
     # t2 = threading.Thread(target=worker2, args=(queue,))
     # t3 = threading.Thread(target=worker3, args=(semaphore,))
-    t1.start()
+        t1.start()
     logging.debug("Tasks are not done.")
     queue.join()
     logging.debug("Tasks are done.")
