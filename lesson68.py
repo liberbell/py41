@@ -11,9 +11,14 @@ logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
 def worker1(queue):
     # lock.acquire()
     logging.debug("start")
-    queue.put(100)
-    queue.put(200)
-    time.sleep(2)
+    while True:
+        item = queue.get()
+        if item is None:
+            break
+        logging.debug(item)
+    # queue.put(100)
+    # queue.put(200)
+    # time.sleep(2)
     # lock.release()
     logging.debug("end")
 
