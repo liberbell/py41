@@ -8,25 +8,28 @@ import time
 logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
 
 def worker1(lock):
-    # lock.acquire()
-    logging.debug("start")
-    time.sleep(2)
-    # lock.release()
-    logging.debug("end")
+    with lock:
+        # lock.acquire()
+        logging.debug("start")
+        time.sleep(2)
+        # lock.release()
+        logging.debug("end")
 
 def worker2(lock):
-    # lock.acquire()
-    logging.debug("start")
-    time.sleep(2)
-    # lock.release()
-    logging.debug("end")
+    with lock:
+        # lock.acquire()
+        logging.debug("start")
+        time.sleep(2)
+        # lock.release()
+        logging.debug("end")
 
 def worker3(lock):
-    # lock.acquire()
-    logging.debug("start")
-    time.sleep(2)
-    # lock.release()
-    logging.debug("end")
+    with lock:
+        # lock.acquire()
+        logging.debug("start")
+        time.sleep(2)
+        # lock.release()
+        logging.debug("end")
 
 # def worker2(d, lock):
 #     logging.debug("start")
