@@ -8,20 +8,8 @@ import time
 
 logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
 
-def worker1(queue):
-    # lock.acquire()
+def worker1():
     logging.debug("start")
-    while True:
-        item = queue.get()
-        if item is None:
-            break
-        logging.debug(item)
-        queue.task_done()
-    # queue.put(100)
-    # queue.put(200)
-    # time.sleep(2)
-    # lock.release()
-    logging.debug("Too longggggg.")
     logging.debug("end")
 
 def worker2(queue):
@@ -53,39 +41,5 @@ def worker2(queue):
 #     logging.debug("end")
 
 if __name__ == "__main__":
-    # t = threading.Timer(3, worker1, args=(100,), kwargs={"y": 200})
-    # t.start()
-    # threads = []
-    # for _ in range(5):
-    #     t = threading.Thread(target=worker1)
-    #     t.setDaemon(True)
-    #     t.start()
-    # print(threading.enumerate())
-    # for thread in threading.enumerate():
-    #     if thread is threading.current_thread():
-    #         print(thread)
-    #         continue
-    #     thread.join()
-    # d = {"x": 0}
-    queue = queue.Queue()
-    for i in range(1000):
-        queue.put(i)
-    ts = []
-    # semaphore = threading.Semaphore(2)
-    for _ in range(3):
-        t1 = threading.Thread(target=worker1, args=(queue,))
-    # t1.setDaemon(True)
-    # t2 = threading.Thread(target=worker2, args=(queue,))
-    # t3 = threading.Thread(target=worker3, args=(semaphore,))
-        t1.start()
-        ts.append(t1)
-    logging.debug("Tasks are not done.")
-    queue.join()
-    logging.debug("Tasks are done.")
-    for _ in range(len(ts)):
-        queue.put(None)
-    [t1.join() for t1 in ts]
-    # t2.start()
-    # t3.start()
-    # print("started")
-    t1.join()
+    t1 = threading.Thread(target=worker1, args=(queue,))
+    t1.start()
