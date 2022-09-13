@@ -26,7 +26,9 @@ if __name__ == "__main__":
     # i = 10
     with multiprocessing.Pool(5) as p:
         p1 = p.apply_async(worker1, (100, ))
+        logging.debug("executing")
         logging.debug(p1.get())
+
     
     # t1 = multiprocessing.Process(target=worker1, args=(i, ))
     # t1.daemon = True
