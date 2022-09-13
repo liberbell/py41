@@ -6,3 +6,10 @@ from multiprocessing import (
 import logging
 import threading
 import time
+
+logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
+
+def worker1(i):
+    logging.debug("start")
+    logging.debug(i)
+    logging.debug("end")
