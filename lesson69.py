@@ -28,4 +28,5 @@ if __name__ == "__main__":
     t2 = multiprocessing.Process(name="renaem worker2", target=worker2, args=(i, ))
     t1.start()
     t2.start()
+    t2.join()
     t1.join()
