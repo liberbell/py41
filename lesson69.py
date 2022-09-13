@@ -15,6 +15,7 @@ def worker1(i):
     logging.debug(i)
     time.sleep(3)
     logging.debug("end")
+    return i
 
 def worker2(i):
     logging.debug("start")
@@ -22,11 +23,15 @@ def worker2(i):
     logging.debug("end")
 
 if __name__ == "__main__":
-    i = 10
-    t1 = multiprocessing.Process(target=worker1, args=(i, ))
-    t1.daemon = True
-    t2 = multiprocessing.Process(name="renaem worker2", target=worker2, args=(i, ))
-    t1.start()
-    t2.start()
-    t2.join()
-    t1.join()
+    # i = 10
+    with multiprocessing.Pool(5) as p:
+        p1 = p.apply_async(worker1, (100, ))
+        logging.debug(p1.get())
+    
+    # t1 = multiprocessing.Process(target=worker1, args=(i, ))
+    # t1.daemon = True
+    # t2 = multiprocessing.Process(name="renaem worker2", target=worker2, args=(i, ))
+    # t1.start()
+    # t2.start()
+    # t2.join()
+    # t1.join()
