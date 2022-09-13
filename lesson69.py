@@ -24,7 +24,7 @@ def worker2(i):
 if __name__ == "__main__":
     i = 10
     t1 = multiprocessing.Process(target=worker1, args=(i, ))
-    t1.daemon()
+    t1.daemon = True
     t2 = multiprocessing.Process(name="renaem worker2", target=worker2, args=(i, ))
     t1.start()
     t2.start()
