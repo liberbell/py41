@@ -22,4 +22,6 @@ def worker2(i):
 if __name__ == "__main__":
     i = 10
     t1 = threading.Thread(target=worker1, args=(i, ))
-    t2 = threading.Thread(name="renaem worker2" target=worker2, args=(i, ))
+    t2 = threading.Thread(name="renaem worker2", target=worker2, args=(i, ))
+    t1.start()
+    t2.start()
