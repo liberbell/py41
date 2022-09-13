@@ -24,7 +24,7 @@ def worker2(i):
 
 if __name__ == "__main__":
     # i = 10
-    with multiprocessing.Pool(5) as p:
+    with multiprocessing.Pool(1) as p:
         p1 = p.apply_async(worker1, (100, ))
         p2 = p.apply_async(worker1, (200, ))
         logging.debug("executing")
