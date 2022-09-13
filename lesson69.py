@@ -4,10 +4,11 @@ from multiprocessing import (
 )
 
 import logging
-import threading
+import multiprocessing
+# import threading
 import time
 
-logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
+logging.basicConfig(level=logging.DEBUG, format="%(processName)s: %(message)s")
 
 def worker1(i):
     logging.debug("start")
@@ -21,7 +22,7 @@ def worker2(i):
 
 if __name__ == "__main__":
     i = 10
-    t1 = threading.Thread(target=worker1, args=(i, ))
-    t2 = threading.Thread(name="renaem worker2", target=worker2, args=(i, ))
+    t1 = multiprocessing.Process(target=worker1, args=(i, ))
+    t2 = multiprocessing.Process(name="renaem worker2", target=worker2, args=(i, ))
     t1.start()
     t2.start()
