@@ -18,12 +18,13 @@ def worker1(barrier):
         logging.debug("end")
 
 def worker2(barrier):
-    r = barrier.wait()
-    logging.debug("num={}".format(r))
-    while True:
-        logging.debug("start")
-        time.sleep(3)
-        logging.debug("end")
+    logging.debug("start")
+    # r = barrier.wait()
+    # logging.debug("num={}".format(r))
+    # while True:
+    #     logging.debug("start")
+    #     time.sleep(3)
+    #     logging.debug("end")
 
 def worker3(barrier):
     with barrier:
