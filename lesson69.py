@@ -15,7 +15,7 @@ def worker1(i):
     logging.debug(i)
     time.sleep(3)
     logging.debug("end")
-    return i
+    return i * 2
 
 def worker2(i):
     logging.debug("start")
