@@ -11,3 +11,9 @@ def worker1(d, lock):
         time.sleep(2)
         d["x"] = i + 1
     logging.debug(d)
+
+def worker2(d, lock):
+    with lock:
+        i = d["x"]
+        d["x"] = i + 1
+    logging.debug(d)
