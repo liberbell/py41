@@ -1,9 +1,11 @@
+from audioop import mul
 import logging
 import time
 import threading
 import multiprocessing
 
-logging.basicConfig(level=logging.DEBUG, format='%(threadName)s: %(message)s')
+# logging.basicConfig(level=logging.DEBUG, format='%(threadName)s: %(message)s')
+logging.basicConfig(level=logging.DEBUG, format='%(processName)s: %(message)s')
 
 def worker1(d, lock):
     with lock:
@@ -20,9 +22,12 @@ def worker2(d, lock):
 
 if __name__ == "__main__":
     d = {"x": 0}
-    lock = threading.Lock()
-    t1 = threading.Thread(target=worker1, args=(d, lock))
-    t2 = threading.Thread(target=worker2, args=(d, lock))
+    lock = multiprocessing.Lock()
+    t1 = multiprocessing.Process(target=worker1, args=(d, lock))
+    t2 = multiprocessing.Process(target=worker2, args=(d, lock))
+    # lock = threading.Lock()
+    # t1 = threading.Thread(target=worker1, args=(d, lock))
+    # t2 = threading.Thread(target=worker2, args=(d, lock))
     t1.start()
     t2.start()
     t1.join()
