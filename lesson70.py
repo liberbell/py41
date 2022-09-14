@@ -17,3 +17,7 @@ def worker2(d, lock):
         i = d["x"]
         d["x"] = i + 1
     logging.debug(d)
+
+if __name__ == "__main__":
+    d = {"x": 0}
+    lock = threading.Lock()
