@@ -25,13 +25,14 @@ def worker2(i):
 if __name__ == "__main__":
     # i = 10
     with multiprocessing.Pool(3) as p:
-        logging.debug(p.apply(worker1, (300, )))
-        logging.debug("executing apply")
-        p1 = p.apply_async(worker1, (100, ))
-        p2 = p.apply_async(worker1, (200, ))
+        r = p.map(worker1, [100, 200])
         logging.debug("executing")
-        logging.debug(p1.get())
-        logging.debug(p2.get())
+        logging.debug(r)
+        # p1 = p.apply_async(worker1, (100, ))
+        # p2 = p.apply_async(worker1, (200, ))
+        # logging.debug("executing")
+        # logging.debug(p1.get())
+        # logging.debug(p2.get())
 
     
     # t1 = multiprocessing.Process(target=worker1, args=(i, ))
