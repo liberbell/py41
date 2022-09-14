@@ -21,8 +21,8 @@ def worker2(d, lock):
 if __name__ == "__main__":
     d = {"x": 0}
     lock = threading.Lock()
-    t1 = threading.Thread(worker1, args=(d, lock))
-    t2 = threading.Thread(worker2, args=(d, lock))
+    t1 = threading.Thread(target=worker1, args=(d, lock))
+    t2 = threading.Thread(target=worker2, args=(d, lock))
     t1.start()
     t2.start()
     t1.join()
