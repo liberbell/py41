@@ -23,3 +23,8 @@ if __name__ == "__main__":
     lock = threading.Lock()
     t1 = threading.Thread(worker1, args=(d, lock))
     t2 = threading.Thread(worker2, args=(d, lock))
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+    logging.debug(d)
