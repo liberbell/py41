@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.DEBUG, format="%(processName)s: %(message)s")
 
 def worker1(i):
     logging.debug("start")
-    logging.debug(i)
+    # logging.debug(i)
     time.sleep(3)
     logging.debug("end")
     return i * 2
