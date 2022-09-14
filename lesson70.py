@@ -3,7 +3,7 @@ import time
 import threading
 import multiprocessing
 
-logging.basicConfig(level=logging.DEBUG, format="%{threadName}s: %{messages}s")
+logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(messages)s")
 
 def worker1(d, lock):
     with lock:
