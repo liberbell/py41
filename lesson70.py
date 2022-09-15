@@ -1,4 +1,3 @@
-from audioop import mul
 import logging
 import time
 import threading
