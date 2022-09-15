@@ -17,7 +17,7 @@ def worker1(d, lock):
 def worker2(d, lock):
     with lock:
         i = d["x"]
-        d["x"] = i + 1
+        d["x"] = i + 2
     logging.debug(d)
 
 if __name__ == "__main__":
