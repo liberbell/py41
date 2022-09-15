@@ -11,7 +11,10 @@ def f(conn):
     conn.close()
 
 if __name__ == "__main__":
-    parent_conn, child_conn = multiprocessing.Pipe()
-    p = multiprocessing.Process(target=f, args=(parent_conn, ))
-    p.start()
-    logging.debug(child_conn.recv())
+    num = multiprocessing.Value("f", 0.0)
+    arr = multiprocessing.Array("i", [1, 2, 3, 4, 5])
+    # parent_conn, child_conn = multiprocessing.Pipe()
+    # p = multiprocessing.Process(target=f, args=(parent_conn, ))
+    # p.start()
+    # p.join()
+    # logging.debug(child_conn.recv())
