@@ -7,6 +7,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(processName)s: %(message)s')
 
 def f(conn):
     conn.send(("test"))
+    time.sleep(2)
     conn.close()
 
 if __name__ == "__main__":
