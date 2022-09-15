@@ -5,8 +5,8 @@ import multiprocessing
 
 logging.basicConfig(level=logging.DEBUG, format='%(processName)s: %(message)s')
 
-def worker1():
-    pass
+def worker1(l, d, n):
+    l.reverse()
 
 if __name__ == "__main__":
     with multiprocessing.Manager() as manager:
