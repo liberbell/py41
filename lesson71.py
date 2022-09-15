@@ -18,7 +18,7 @@ def f(num, arr):
 if __name__ == "__main__":
     num = multiprocessing.Value("f", 0.0)
     arr = multiprocessing.Array("i", [1, 2, 3, 4, 5])
-    p = multiprocessing.Process(target=f, (num, arr))
+    p = multiprocessing.Process(target=f, args=(num, arr))
     p.start()
     # parent_conn, child_conn = multiprocessing.Pipe()
     # p = multiprocessing.Process(target=f, args=(parent_conn, ))
