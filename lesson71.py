@@ -14,3 +14,6 @@ def f(conn):
 
 if __name__ == "__main__":
     parent_conn, child_conn = multiprocessing.Pipe()
+    p = multiprocessing.Process(target=f, args=(parent_conn, ))
+    p.start()
+    logging.debug(child_conn.recv())
