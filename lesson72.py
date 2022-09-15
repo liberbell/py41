@@ -7,6 +7,8 @@ logging.basicConfig(level=logging.DEBUG, format='%(processName)s: %(message)s')
 
 def worker1(l, d, n):
     l.reverse()
+    d["x"] += 1
+    n.y += 1
 
 if __name__ == "__main__":
     with multiprocessing.Manager() as manager:
@@ -19,7 +21,7 @@ if __name__ == "__main__":
         l.append(3)
 
         d["x"] = 0
-        n, y = 0
+        n.y = 0
 
         p1 = multiprocessing.Process(target=worker1, args=(l, d, n))
         p1.start()
