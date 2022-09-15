@@ -20,6 +20,8 @@ if __name__ == "__main__":
     arr = multiprocessing.Array("i", [1, 2, 3, 4, 5])
     p = multiprocessing.Process(target=f, args=(num, arr))
     p.start()
+    p.join()
+    logging.debug(arr[:])
     # parent_conn, child_conn = multiprocessing.Pipe()
     # p = multiprocessing.Process(target=f, args=(parent_conn, ))
     # p.start()
