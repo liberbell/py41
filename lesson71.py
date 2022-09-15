@@ -21,6 +21,7 @@ if __name__ == "__main__":
     p = multiprocessing.Process(target=f, args=(num, arr))
     p.start()
     p.join()
+    logging.debug(num.value)
     logging.debug(arr[:])
     # parent_conn, child_conn = multiprocessing.Pipe()
     # p = multiprocessing.Process(target=f, args=(parent_conn, ))
