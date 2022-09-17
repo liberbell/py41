@@ -6,7 +6,7 @@ class QueueManager(BaseManager):
 
 QueueManager.register("get_queue")
 
-manager = QueueManager(address=("127.0.0.1"), authkey="thisisakey")
+manager = QueueManager(address=("127.0.0.1", 50000), authkey="thisisakey")
 manager.connect()
 queue = manager.get_queue()
 queue.put("hello")
