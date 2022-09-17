@@ -10,3 +10,5 @@ class QueueManager(BaseManager):
 QueueManager.register("get_queue", callable=lambda: queue)
 
 manager = QueueManager(address=("127.0.0.1", 50000), authkey=b"thisisakey")
+server = manager.get_server()
+server.serve_forever()
