@@ -11,6 +11,7 @@ logging.basicConfig(level=logging.DEBUG, format="%(processName)s: %(message)s")
 def worker(x, y):
     logging.debug("start")
     r = x * y
+    logging.debug(r)
     logging.debug("end")
 
 def main():
