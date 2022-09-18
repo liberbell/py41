@@ -1,3 +1,4 @@
+from ssl import _Cipher
 import string
 import random
 
@@ -8,9 +9,10 @@ print(string.ascii_letters)
 key = "".join(
     random.choice(string.ascii_letters) for _ in range(AES.block_size)
 )
-print(key)
 
 iv = "".join(
     random.choice(string.ascii_letters) for _ in range(AES.block_size)
 )
-print(iv)
+print(key, iv)
+
+cipher = AES.new(key, AES.MODE_CBC, iv)
