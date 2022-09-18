@@ -1,4 +1,3 @@
-from ssl import _Cipher
 import string
 import random
 
@@ -18,3 +17,5 @@ print(key, iv)
 plaintext = "fdseiourwaiogjhlkajfaslj"
 cipher = AES.new(key, AES.MODE_CBC, iv)
 padding_length = AES.block_size - len(plaintext) % AES.block_size
+
+plaintext += chr(padding_length) * padding_length
