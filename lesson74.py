@@ -6,7 +6,7 @@ import logging
 import time
 
 logging.basicConfig(level=logging.DEBUG, format="%(threadName)s: %(message)s")
-logging.basicConfig(level=logging.DEBUG, format="%(processName)s: %(message)s")
+# logging.basicConfig(level=logging.DEBUG, format="%(processName)s: %(message)s")
 
 def worker(x, y):
     logging.debug("start")
@@ -21,6 +21,10 @@ def main():
         f2 = executor.submit(worker, 2, 5)
         logging.debug(f1.result)
         logging.debug(f2.result)
+
+        args = [[2, 5], [2, 5]]
+        r = executor.map(worker, *args)
+        logging.debug(r)
 
 if __name__ == "__main__":
     main()
