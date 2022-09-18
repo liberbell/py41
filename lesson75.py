@@ -19,3 +19,5 @@ cipher = AES.new(key, AES.MODE_CBC, iv)
 padding_length = AES.block_size - len(plaintext) % AES.block_size
 
 plaintext += chr(padding_length) * padding_length
+chipher_text = cipher.encrypt(plaintext)
+print(chipher_text)
