@@ -22,7 +22,7 @@ def main():
         # logging.debug(f1.result)
         # logging.debug(f2.result)
 
-        args = [[2, 5], [2, 5]]
+        args = [[2, 2], [5, 5]]
         r = executor.map(worker, *args)
         logging.debug(r)
         logging.debug([i for i in r])
