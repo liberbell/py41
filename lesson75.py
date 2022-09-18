@@ -10,7 +10,7 @@ key = "".join(
 )
 
 iv = "".join(
-    random.choice(string.ascii_ßletters) for _ in range(AES.block_size)
+    random.choice(string.ascii_letters) for _ in range(AES.block_size)
 )
 print(key, iv)
 
@@ -24,3 +24,5 @@ print(chipher_text)
 
 cipher2 = AES.new(key, AES.MODE_CBC, iv)
 decrypted_text = cipher2.decrypt(chipher_text)
+
+print(decrypted_text[:-decrypted_text[-1]])
