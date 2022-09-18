@@ -9,3 +9,8 @@ key = "".join(
     random.choice(string.ascii_letters) for _ in range(AES.block_size)
 )
 print(key)
+
+iv = "".join(
+    random.choice(string.ascii_letters) for _ in range(AES.block_size)
+)
+print(iv)
