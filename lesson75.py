@@ -1,5 +1,6 @@
 import string
 import random
+from tokenize import PlainToken
 
 from Crypto.Cipher import AES
 
@@ -14,12 +15,15 @@ iv = "".join(
 )
 print(key, iv)
 
-plaintext = "fdseiourwaiogjhlkajfaslj"
-cipher = AES.new(key, AES.MODE_CBC, iv)
-padding_length = AES.block_size - len(plaintext) % AES.block_size
+# plaintext = "fdseiourwaiogjhlkajfaslj"
+with open("plaintext.txt", "r") as f, open("enc.dat", "wb")as e:
+    plaintext = f.read()
+    cipher = AES.new(key, AES.MODE_CBC, iv)
+    padding_length = AES.block_size - len(plaintext) % AES.block_size
 
-plaintext += chr(padding_length) * padding_length
-chipher_text = cipher.encrypt(plaintext)
+    plaintext += chr(padding_length) * padding_length
+    chipher_text = cipher.encrypt(plaintext)
+    e.write()
 print(chipher_text)
 
 cipher2 = AES.new(key, AES.MODE_CBC, iv)
