@@ -26,7 +26,7 @@ with open("plaintext.txt", "r") as f, open("enc.dat", "wb")as e:
     e.write(chipher_text)
 # print(chipher_text)
 
-cipher2 = AES.new(key, AES.MODE_CBC, iv)
-decrypted_text = cipher2.decrypt(chipher_text)
-
-print(decrypted_text[:-decrypted_text[-1]])
+with open("plaintext.txt", "rb") as f:
+    cipher2 = AES.new(key, AES.MODE_CBC, iv)
+    decrypted_text = cipher2.decrypt(f.read())
+    print(decrypted_text[:-decrypted_text[-1]])
