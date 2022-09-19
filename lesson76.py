@@ -1,5 +1,6 @@
+import base64
+import os
 import hashlib
-from hmac import digest
 
 # print(hashlib.sha256(b"password").hexdigest())
 
@@ -17,4 +18,4 @@ db[user_name] = get_digest(user_pass)
 def is_login(user_name, password):
     return get_digest(password) == db[user_name]
 
-print(is_login(user_name, "t4st"))
+print(is_login(user_name, "passwords"))
