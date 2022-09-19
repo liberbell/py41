@@ -13,4 +13,8 @@ def get_digest(password):
     return digest
 
 db[user_name] = get_digest(user_pass)
+
+def is_login(user_name, password):
+    return get_digest(password)
+    
 print(db)
