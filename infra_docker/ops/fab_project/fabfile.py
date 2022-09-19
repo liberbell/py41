@@ -3,6 +3,7 @@ from fabric.colors import *
 from fabric.contrib.files import *
 
 # fabric file
+# http settings
 
 WEB_DIR = '/root/work'
 
