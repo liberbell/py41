@@ -29,4 +29,4 @@ with open("plaintext.txt", "r") as f, open("enc.dat", "wb")as e:
 with open("enc.dat", "rb") as f:
     cipher2 = AES.new(key, AES.MODE_CBC, iv)
     decrypted_text = cipher2.decrypt(f.read())
-    print(decrypted_text[:-decrypted_text[-1]])
+    print(decrypted_text[:-decrypted_text[-1]].decode("utf-8"))
