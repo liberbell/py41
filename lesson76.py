@@ -22,14 +22,14 @@ salt = base64.b64encode(os.urandom(32))
 #     print(digest)
 #     return digest
 
-digest = hashlib.pbkdf2_hmac("sha256", bytes(user_pass, "utf-8"), salt, 10000)]
+digest = hashlib.pbkdf2_hmac("sha256", bytes(user_pass, "utf-8"), salt, 10000)
 
 db[user_name] = digest
 
 # db[user_name] = get_digest(user_pass)
 
 def is_login(user_name, password):
-    digest = hashlib.pbkdf2_hmac("sha256", bytes(password, "utf-8"), salt, 10000)]
+    digest = hashlib.pbkdf2_hmac("sha256", bytes(password, "utf-8"), salt, 10000)
     return digest == db[user_name]
 
 print(is_login(user_name, user_pass))
