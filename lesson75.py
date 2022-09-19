@@ -13,7 +13,7 @@ key = "".join(
 iv = "".join(
     random.choice(string.ascii_letters) for _ in range(AES.block_size)
 )
-print(key, iv)
+# print(key, iv)
 
 # plaintext = "fdseiourwaiogjhlkajfaslj"
 with open("plaintext.txt", "r") as f, open("enc.dat", "wb")as e:
