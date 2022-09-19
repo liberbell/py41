@@ -2,6 +2,7 @@ from fabric.api import *
 from fabric.colors import *
 from fabric.contrib.files import *
 
+# fabric file
 
 WEB_DIR = '/root/work'
 
