@@ -23,8 +23,8 @@ with open("plaintext.txt", "r") as f, open("enc.dat", "wb")as e:
 
     plaintext += chr(padding_length) * padding_length
     chipher_text = cipher.encrypt(plaintext)
-    e.write()
-print(chipher_text)
+    e.write(chipher_text)
+# print(chipher_text)
 
 cipher2 = AES.new(key, AES.MODE_CBC, iv)
 decrypted_text = cipher2.decrypt(chipher_text)
