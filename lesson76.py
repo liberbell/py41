@@ -22,4 +22,4 @@ db[user_name] = get_digest(user_pass)
 def is_login(user_name, password):
     return get_digest(password) == db[user_name]
 
-print(is_login(user_name, "passwords"))
+print(is_login(user_name, user_pass"))
